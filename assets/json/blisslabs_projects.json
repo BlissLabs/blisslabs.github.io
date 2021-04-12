@@ -3,16 +3,16 @@
     "project": "BlissROM",
     "project_lead": "JackEagle",
     "project_description": "AOSP based OS for phones with many customization options",
-    "project_github": "https://github.comm/BlissRoms",
-    "project_website": "https://blissroms.com"
-    "avatar": "https://avatars.githubusercontent.com/u/16156670?s=400&u=5160eeb5c4f1adcff950e34e4bb01010531ba24a&v=4",
+    "project_github": "https:\/\/github.comm\/BlissRoms",
+    "project_website": "https:\/\/blissroms.com",
+    "avatar": "https:\/\/avatars.githubusercontent.com\/u\/16156670?s=400&u=5160eeb5c4f1adcff950e34e4bb01010531ba24a&v=4",
   },
   {
     "project": "BlissOS",
     "project_lead": "Jon West",
     "project_description": "AOSP based OS for PC's with many customization options",
-    "project_github": "https://github.comm/BlissRoms-x86",
-    "project_website": "https://blissos.org"
-    "avatar": "https://avatars.githubusercontent.com/u/16156670?s=400&u=5160eeb5c4f1adcff950e34e4bb01010531ba24a&v=4",
+    "project_github": "https:\/\/github.comm\/BlissRoms-x86",
+    "project_website": "https:\/\/blissos.org",
+    "avatar": "https:\/\/avatars.githubusercontent.com\/u\/16156670?s=400&u=5160eeb5c4f1adcff950e34e4bb01010531ba24a&v=4",
   },
 ]
