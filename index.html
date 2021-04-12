@@ -83,13 +83,16 @@
           </div>
         </div>
         <div class="d-inline-flex">
+		<section id="content" class="project-content"></section>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
           <script>
 			  $.ajax({
 				type: "GET",
-				<!-- url: "https://yacdn.org/proxy/https://blisslabs.org/assets/json/blisslabs_projects.json", // TeamBliss JSON -->
-				url: "https://api.allorigins.win/raw?url=https://blisslabs.org/assets/json/blisslabs_projects.json", // TeamBliss JSON
-				
+				url: "assets/json/blisslabs_projects.json",
+				<!-- dataType: 'json', -->
+				contentType: "application/json",
+				datatype: "json",
+				data: {},
 				success: function(data) {
 				  var newContent = ''; // Variable to hold HTML
 				  for (var i = 0; i < data.length; i++) { // Loop through object
@@ -100,7 +103,6 @@
 					newContent += '<h3>' + data[i].project_lead + '</h3>';
 					newContent += '<a href="' + data[i].project_github + '" target="_blank"><i class="fab fa fa-github p-2" style="font-size: 300%;"></i></a><a href="' + data[i].project_website + '" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a> ';
 					newContent += '<p class="mb-0">' + data[i].project_description + '</p>';
-					// newContent += '<p class="team_data_text font-weight-bold"><i>&quot;' + data[i].email + '&quot;</i></p>';
 					newContent += '</div>';
 					newContent += '</div>';
 				  }
