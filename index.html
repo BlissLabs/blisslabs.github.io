@@ -2,25 +2,51 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Bliss Labs</title>  
-  <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Cormorant+Garamond|Poiret+One" rel="stylesheet">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- PAGE settings -->
+  <link rel="icon" href="favicon.ico">
+  <title>BlissLabs</title>
+  <meta name="description" content="A non-profit org that develops open source software for the community">
+  <meta name="keywords" content="aosp, bliss, labs">
+  <!-- CSS dependencies -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Cormorant+Garamond|Poiret+One" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
+  <link rel="stylesheet" href="colorful.css">
+  <!-- Script: Navbar on-top -->
+  <script src="js/navbar-ontop.js"></script>
 </head>
 
 <body>
-  <!-- partial:index.partial.html -->
-  <header id="header">
+  <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <div class="row">
+          <div class="col-md-2" style=""><img class="img-fluid d-block mx-auto mnav" src="assets/images/Lotus_white.png" width="35%"></div>
+          <div class="col-md-6" style=""><b>BlissLabs</b></div>
+        </div>
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar3SupportedContent" aria-controls="navbar3SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse text-center justify-content-end" id="navbar3SupportedContent">
+        <!-- <ul class="navbar-nav">
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="index.html#what" data-target="what">What</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="index.html#how" data-target="how">How</a>
+          </li>
+        </ul> -->
+        <!-- <a class="btn navbar-btn btn-outline-light" href="https://github.com/boringdroid/boringdroid" target="_blank">Github</a> -->
+      </div>
+    </div>
+  </nav>
+  <div class="text-center cover d-flex flex-column">
+	<header id="header">
     <div class="vert-text">
       <div class="p-img-n" style="padding-bottom:1.7rem;">
-        <img src="assets/img/bliss_labs_logo.svg" width="170px">
+        <img src="assets/images/bliss_labs_logo.svg" width="170px">
       </div>
       <h1 id="typer-size">
         <!-- TEXTS -->
@@ -51,6 +77,45 @@
       <a href="#contacts" class="scroll-down nav-link"></a>
     </div>
   </header>
+
+  <div class="py-4 filter-ldark cover bg-fixed text-light" style="background-image: url(&quot;https://i.imgur.com/gDeZpfE.png&quot;); background-position: left top; background-size: 100%; background-repeat: repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto col-md-8">
+          <h1 class="mb-3">BlissLabs Projects</h1>
+          <p class="lead">We are part of a larger community of open-source projects called Bliss Family of ROMs. Explore more about their other projects below </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/BlissIcon.png" width="150">
+            <h2>Bliss OS</h2>
+            <a href="https://github.com/BlissRoms-x86" target="_blank"><i class="fab fa fa-github p-2" style="font-size: 300%;"></i></a><a href="https://blissos.org" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a>
+            <p class="mb-0">Bliss OS brings all the features and options of Bliss ROM to your PC, tablet, chromebook and mackbook. and is available in many different configurations.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="https://i.imgur.com/bTd1SMo.png" width="150">
+            <h3>Android-Generic Project</h3>
+            <a href="https://gitlab.com/android-generic/vendor_android-generic" target="_blank"><i class="fab fa fa-git p-2" style="font-size: 300%;"></i></a><a href="https://gitlab.com/android-generic/vendor_android-generic" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a>
+            <p class="mb-0">Bringing Android ROMs to PC's and GSI devices everywhere. Simple to start, easy to use. Go get your ROM on!</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/SG_Asset_2.png" width="138">
+            <h2>Supreme Gamers</h2>
+            <div>
+              <a href="https://gitlab.com/AXIM0S/vendor-gearlock" target="_blank"><i class="fab fa-git fa p-2" style="font-size: 300%;"></i></a><a href="https://supreme-gamers.com/" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a>
+            </div>
+            <div>
+              <p class="mb-0">Android-x86 Gaming Community and creators of Gearlock Recovery for Android-x86 based projects</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   
   <!-- FOOTER  -->
   <footer id="contacts">
     <div class="container">
@@ -66,7 +131,7 @@
 			<a href="https://www.facebook.com/BlissROMs" class="text-muted" target="_blank">
               <i class="fa fa-fw fa-facebook fa-2x mx-3"></i>
             </a> 
-                        <a href="https://www.instagram.com/blissroms" class="text-muted" target="_blank">
+			<a href="https://www.instagram.com/blissroms" class="text-muted" target="_blank">
               <i class="fa fa-fw fa-instagram fa-2x mx-3"></i>
             </a>
 			<a href="https://twitter.com/stayblissful" class="text-muted" target="_blank">
@@ -89,21 +154,14 @@
       </div>
     </div>
   </footer>
-  <div class="text-center py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-        </div>
-      </div>
-      <div class="row">
-      </div>
-    </div>
-  </div>
-  <!-- FOLLOW -->
-  <!-- partial -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="./script.js"></script>
+  
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"></script>
+  <!-- Script: Smooth scrolling between anchors in the same page -->
+  <script src="js/smooth-scroll.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
