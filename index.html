@@ -74,38 +74,41 @@
     </header>
     <div id="projects" class="py-4 filter-ldark cover bg-fixed text-light" style="background-image: url(&quot;https://i.imgur.com/gDeZpfE.png&quot;); background-position: left top; background-size: 100%; background-repeat: repeat;">
       <div class="container">
+	    
+	  
         <div class="row">
           <div class="mx-auto col-md-8">
             <h1 class="mb-3">BlissLabs Projects</h1>
             <p class="lead">We are part of a larger community of open-source projects called Bliss Family of ROMs. Explore more about their other projects below </p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/BlissIcon.png" width="150">
-              <h2>Bliss OS</h2>
-              <a href="https://github.com/BlissRoms-x86" target="_blank"><i class="fab fa fa-github p-2" style="font-size: 300%;"></i></a><a href="https://blissos.org" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a>
-              <p class="mb-0">Bliss OS brings all the features and options of Bliss ROM to your PC, tablet, chromebook and mackbook. and is available in many different configurations.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="https://i.imgur.com/bTd1SMo.png" width="150">
-              <h3>Android-Generic Project</h3>
-              <a href="https://gitlab.com/android-generic/vendor_android-generic" target="_blank"><i class="fab fa fa-git p-2" style="font-size: 300%;"></i></a><a href="https://gitlab.com/android-generic/vendor_android-generic" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a>
-              <p class="mb-0">Bringing Android ROMs to PC's and GSI devices everywhere. Simple to start, easy to use. Go get your ROM on!</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/SG_Asset_2.png" width="138">
-              <h2>Supreme Gamers</h2>
-              <div>
-                <a href="https://gitlab.com/AXIM0S/vendor-gearlock" target="_blank"><i class="fab fa-git fa p-2" style="font-size: 300%;"></i></a><a href="https://supreme-gamers.com/" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a>
-              </div>
-              <div>
-                <p class="mb-0">Android-x86 Gaming Community and creators of Gearlock Recovery for Android-x86 based projects</p>
-              </div>
-            </div>
-          </div>
+        <div class="d-inline-flex">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+          <script>
+			  $.ajax({
+				type: "GET",
+				<!-- url: "https://yacdn.org/proxy/https://blisslabs.org/assets/json/blisslabs_projects.json", // TeamBliss JSON -->
+				url: "https://api.allorigins.win/raw?url=https://blisslabs.org/assets/json/blisslabs_projects.json", // TeamBliss JSON
+				
+				success: function(data) {
+				  var newContent = ''; // Variable to hold HTML
+				  for (var i = 0; i < data.length; i++) { // Loop through object
+					newContent += '<div class="col-md-4">';
+					newContent += '<div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="' + data[i].avatar + '" width="150"> ';
+					newContent += 'alt="' + data[i].project + '" />';
+					newContent += '<h2><b>' + data[i].project + '</b></h2>';
+					newContent += '<h3>' + data[i].project_lead + '</h3>';
+					newContent += '<a href="' + data[i].project_github + '" target="_blank"><i class="fab fa fa-github p-2" style="font-size: 300%;"></i></a><a href="' + data[i].project_website + '" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a> ';
+					newContent += '<p class="mb-0">' + data[i].project_description + '</p>';
+					// newContent += '<p class="team_data_text font-weight-bold"><i>&quot;' + data[i].email + '&quot;</i></p>';
+					newContent += '</div>';
+					newContent += '</div>';
+				  }
+				  // Update the page with the new content
+				  document.getElementById('content').innerHTML = newContent;
+				}
+			  })
+			</script>
         </div>
       </div>
     </div>
