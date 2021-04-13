@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="colorful.css">
   <!-- Script: Navbar on-top -->
   <script src="js/navbar-ontop.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -73,41 +74,46 @@
       </div>
     </header>
     <div id="projects" class="py-4 filter-ldark cover bg-fixed text-light" style="background-image: url(&quot;https://i.imgur.com/gDeZpfE.png&quot;); background-position: left top; background-size: 100%; background-repeat: repeat;">
-      <div class="container">
+      <div class="">
 	    
 	  
         <div class="row">
           <div class="mx-auto col-md-8">
             <h1 class="mb-3">BlissLabs Projects</h1>
-            <p class="lead">We are part of a larger community of open-source projects called Bliss Family of ROMs. Explore more about their other projects below </p>
+            <p class="lead">We help start and maintain various community and open-source projects. Explore more about our projects below </p>
           </div>
         </div>
         <div class="d-inline-flex">
-		<section id="content" class="project-content"></section>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<div id="content" class="project-content"></div>
           <script>
 			  $.ajax({
 				type: "GET",
 				url: "assets/json/blisslabs_projects.json",
-				<!-- dataType: 'json', -->
-				contentType: "application/json",
+				contentType: "application/json", 
 				datatype: "json",
 				data: {},
 				success: function(data) {
-				  var newContent = ''; // Variable to hold HTML
-				  for (var i = 0; i < data.length; i++) { // Loop through object
-					newContent += '<div class="col-md-4">';
-					newContent += '<div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="' + data[i].avatar + '" width="150"> ';
-					newContent += 'alt="' + data[i].project + '" />';
-					newContent += '<h2><b>' + data[i].project + '</b></h2>';
-					newContent += '<h3>' + data[i].project_lead + '</h3>';
-					newContent += '<a href="' + data[i].project_github + '" target="_blank"><i class="fab fa fa-github p-2" style="font-size: 300%;"></i></a><a href="' + data[i].project_website + '" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a> ';
-					newContent += '<p class="mb-0">' + data[i].project_description + '</p>';
-					newContent += '</div>';
-					newContent += '</div>';
-				  }
-				  // Update the page with the new content
-				  document.getElementById('content').innerHTML = newContent;
+					var newContent = ''; // Variable to hold HTML
+					for (var i = 0; i < data.length; i++) { // Loop through object
+						if(data[i].project != null){
+							newContent += '<div class="blur badge-dark">';
+							newContent += '<div class="card-body p-4">';
+							newContent += '<img class="img-fluid d-block mb-3 mx-auto" src="' + data[i].avatar + '" width="150" ';
+							newContent += 'alt="' + data[i].project + '" />';
+							newContent += '<h2><b>' + data[i].project + '</b></h2>';
+							newContent += '<h3>' + data[i].project_lead + '</h3>';
+							newContent += '<a href="' + data[i].project_github + '" target="_blank"><i class="fab fa fa-github p-2" style="font-size: 300%;"></i></a>';
+							newContent += '<a href="' + data[i].project_website + '" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a>';
+							newContent += '<p class="mb-0">' + data[i].project_description + '</p>';
+							newContent += '</div>';
+							newContent += '</div>';
+						} else {
+							<!-- newContent += '<div class="col-md-4">No Data</div>'; -->
+							newContent = '<div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/BlissIcon.png" width="150"><h2>Bliss OS</h2><a href="https://github.com/BlissRoms-x86" target="_blank"><i class="fa fa fa-github p-2" style="font-size: 300%;"></i></a><a href="https://blissos.org" target="_blank"><i class="fa fa p-2 fa-globe" style="font-size: 300%;"></i></a><p class="mb-0">Bliss OS brings all the features and options of Bliss ROM to your PC, tablet, chromebook and mackbook. and is available in many different configurations.</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="https://avatars0.githubusercontent.com/u/65220149?s=200&amp;v=4" width="150"><h1>Boringdroid</h1><a href="https://github.com/boringdroid" target="_blank"><i class="fa fa-github p-2" style="font-size: 300%;"></i></a><p class="mb-0">Boringdroid is a boring project to provide patch set to run multi-window on low version AOSP.</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="https://i.imgur.com/bTd1SMo.png" width="150"><h1>Android-Generic Project</h1><a href="https://gitlab.com/android-generic/vendor_android-generic" target="_blank"><i class="fa fa-git p-2" style="font-size: 300%;"></i></a><p class="mb-0">Bringing Android ROMs to PCs and GSI devices everywhere. Simple to start, easy to use. Go get your ROM on!</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/SG_Asset_2.png" width="138"><h1>Supreme Gamers</h1><a href="https://supreme-gamers.com/" target="_blank"><i class="fa fa-google p-2" style="font-size: 300%;"></i></a><a href="https://gitlab.com/AXIM0S/vendor-gearlock" target="_blank"><i class="fa fa-git p-2" style="font-size: 300%;"></i></a><p class="mb-0">Android-x86 Gaming Community and creators of Gearlock Recovery for Android-x86 based projects</p></div></div>';
+						}
+					}
+					// Update the page with the new content
+					document.getElementById('content').innerHTML = newContent;
 				}
 			  })
 			</script>
@@ -153,7 +159,7 @@
       </div>
     </footer>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"></script>
     <!-- Script: Smooth scrolling between anchors in the same page -->
