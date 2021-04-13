@@ -6797,7 +6797,7 @@ img{
     -o-transition     : all 2s linear;
 }
 
-ul {
+ul.soc-icons {
   margin: 0;
   padding: 0;
   display: flex;
@@ -6807,12 +6807,12 @@ ul {
   transform: translate(-50%, -50%);
 }
 
-ul li {
+ul.soc-icons li {
   list-style: none;
   margin: 0 15px;
 }
 
-ul li a {
+ul.soc-icons li a {
   position: relative; 
   display: block;
   width: 60px;
@@ -6826,7 +6826,7 @@ ul li a {
   transition: .5s;
 }
 
-ul li a::before {
+ul.soc-icons li a::before {
   content: '';
   position: absolute;
   top: 0;
@@ -6840,12 +6840,12 @@ ul li a::before {
   z-index: -1;
 }
 
-ul li a:hover::before {
+ul.soc-icons li a:hover::before {
   transform: scale(1.1);
   box-shadow: 0 0 15px #007bff;
 }
 
-ul li a:hover {
+ul.soc-icons li a:hover {
   color: #007bff;
   box-shadow: 0 0 5px #007bff;
   text-shadow: 0 0 5px #007bff;
