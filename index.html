@@ -101,9 +101,9 @@
 							newContent += '<img class="img-fluid d-block mb-3 mx-auto" src="' + data[i].project_avatar + '" width="150" ';
 							newContent += 'alt="' + data[i].project + '" />';
 							newContent += '<h2><b>' + data[i].project + '</b></h2>';
-							newContent += '<h3>' + data[i].project_lead + '</h3>';
+							newContent += '<h5>Project Lead: ' + data[i].project_lead + '</h5>';
 							if(data[i].project_github != null) {
-								newContent += '<a href="' + data[i].project_github + '" target="_blank"><i class="fab fa fa-github p-2" style="font-size: 300%;"></i></a>';
+								newContent += '<a href="' + data[i].project_github + '" target="_blank"><i class="fab fa fa-git p-2" style="font-size: 300%;"></i></a>';
 							}
 							if(data[i].project_website != null) {
 								newContent += '<a href="' + data[i].project_website + '" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a>';
