@@ -102,8 +102,12 @@
 							newContent += 'alt="' + data[i].project + '" />';
 							newContent += '<h2><b>' + data[i].project + '</b></h2>';
 							newContent += '<h3>' + data[i].project_lead + '</h3>';
-							newContent += '<a href="' + data[i].project_github + '" target="_blank"><i class="fab fa fa-github p-2" style="font-size: 300%;"></i></a>';
-							newContent += '<a href="' + data[i].project_website + '" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a>';
+							if(data[i].project_github != null) {
+								newContent += '<a href="' + data[i].project_github + '" target="_blank"><i class="fab fa fa-github p-2" style="font-size: 300%;"></i></a>';
+							}
+							if(data[i].project_website != null) {
+								newContent += '<a href="' + data[i].project_website + '" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a>';
+							}
 							newContent += '<p class="mb-0">' + data[i].project_description + '</p>';
 							newContent += '</div>';
 							newContent += '</div>';
