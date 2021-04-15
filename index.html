@@ -108,9 +108,8 @@
 						if(data[i].project != null){
 							newContent += '<li class="cards__item">';
 							newContent += '<div class="card blur badge-dark">';
-							<!-- newContent += '<div class="card__image" style="background-image: url(' + data[i].project_avatar + ');">'; -->
 							newContent += '<div class="card__image" style="background-color: ' + colorsArray[uniqueColorIndex] + ';">';
-							newContent += '<img class="img-fluid d-block mb-3 mx-auto" src="' + data[i].project_avatar + '" width="150" ';
+							newContent += '<img class="img-fluid d-block mb-3 mt-3 mx-auto" src="' + data[i].project_avatar + '" style="max-width: auto; height: 150px;" ';
 							newContent += 'alt="' + data[i].project + ' " style="padding-top: 1.5rem;"/>';
 							newContent += '</div>';
 							newContent += '<div class="card__content">';
