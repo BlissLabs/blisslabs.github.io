@@ -94,13 +94,13 @@
 				datatype: "json",
 				data: {},
 				success: function(data) {
-					var colorsArray = ['rgba(100, 100, 100, 0.7)', 'rgba(48, 48, 48, 0.7)', 'rgba(0, 168, 236, 0.7)', 'rgba(0, 128, 255, 0.7)', 'rgba(0, 96, 170, 0.7)', 'rgba(137, 124, 178, 0.7)', 'rgba(0, 33, 46, 0.7)', ];
+					var colorsArray = ['rgba(100, 100, 100, 0.7)', 'rgba(48, 48, 48, 0.7)', 'rgba(0, 168, 236, 0.7)', 'rgba(0, 128, 255, 0.7)', 'rgba(0, 96, 170, 0.7)', 'rgba(137, 124, 178, 0.7)', 'rgba(0, 33, 46, 0.7)' ];
 					var uniqueColorIndex = 0;
 
 					var newContent = ''; // Variable to hold HTML
 					for (var i = 0; i < data.length; i++) { // Loop through object
 						min = 1
-						max = colorsArray.length
+						max = colorsArray.length -1
 						uniqueColorIndex = Math.floor(min + Math.random()*(max + 1 - min));
 						if(colorsArray[uniqueColorIndex] == 'undefined'){
 							uniqueColorIndex = colorsArray.length - 1 
