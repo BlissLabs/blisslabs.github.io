@@ -83,10 +83,9 @@
           </div>
         </div>
         <div class="">
-		<div id="content" class="project-content"></div>
+		<ul id="content" class="project-content cards text-dark"></ul>
           
 			<!---------------->
-			<ul class="cards text-dark">
 			<script>
 			  $.ajax({
 				type: "GET",
@@ -95,12 +94,17 @@
 				datatype: "json",
 				data: {},
 				success: function(data) {
-					var colorsArray = ['#4561b2', '#5fa8f1', '#007bff', '#265cff', '#00238c', '#17a2b8'];
+					var colorsArray = ['rgba(100, 100, 100, 0.7)', 'rgba(48, 48, 48, 0.7)', 'rgba(0, 168, 236, 0.7)', 'rgba(0, 128, 255, 0.7)', 'rgba(0, 96, 170, 0.7)', 'rgba(137, 124, 178, 0.7)', 'rgba(0, 33, 46, 0.7)', ];
 					var uniqueColorIndex = 0;
 
 					var newContent = ''; // Variable to hold HTML
 					for (var i = 0; i < data.length; i++) { // Loop through object
-						uniqueColorIndex = Math.floor(Math.random() * (colorsArray.length - 0 + 1));
+						min = 1
+						max = colorsArray.length
+						uniqueColorIndex = Math.floor(min + Math.random()*(max + 1 - min));
+						if(colorsArray[uniqueColorIndex] == 'undefined'){
+							uniqueColorIndex = colorsArray.length - 1 
+						}
 						if(data[i].project != null){
 							newContent += '<li class="cards__item">';
 							newContent += '<div class="card blur badge-dark">';
@@ -137,7 +141,6 @@
 				}
 			  })
 			</script>
-			</ul>
 			<!---------------->			
         </div>
       </div>
