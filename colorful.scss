@@ -23,21 +23,21 @@ $enable-print-styles:       true;
 // Colors
 
 $theme-colors: (
-  primary: #12bbad,
-  secondary: #ee5100,
+  primary: #0080ff,
+  secondary: #0060aa,
   light: #f3f3f3,
   dark: #151515,
-  info: #009fdc,
+  info: #00aaff,
   success: #28a745,
   warning: #ffc107,
   danger: #dc3545
 );
 
-$body-bg: white;
-$body-color: #333;
+$body-bg: #111;
+$body-color: #efefef;
 
 $body-color-inverse: invert($body-color) !default;
-$link-color: #aaa;
+$link-color: #0080ff;
 
 // Fonts
 
