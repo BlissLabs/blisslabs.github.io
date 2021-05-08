@@ -344,12 +344,16 @@ img{
 }
 .blur {
 	backdrop-filter: blur(5px);
+	background: rgba(0,0,0,0.8);
+	backdrop-filter: saturate(180%) blur(10px);
 }
 .bright-blur {
 	/* URL to SVG filter */
 	backdrop-filter: url(commonfilters.svg#filter);
 
 	/* <filter-function> values */
+	background: rgba(0,0,0,0.8);
+	backdrop-filter: saturate(180%) blur(10px);
 	backdrop-filter: blur(2px);
 	backdrop-filter: brightness(60%);
 	backdrop-filter: contrast(40%);
@@ -359,7 +363,7 @@ img{
 	backdrop-filter: invert(70%);
 	backdrop-filter: opacity(20%);
 	backdrop-filter: sepia(90%);
-	backdrop-filter: saturate(80%);
+	/* backdrop-filter: saturate(80%); */
 
 	/* Multiple filters */
 	backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
