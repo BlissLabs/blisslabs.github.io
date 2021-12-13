@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="colorful.css">
   <link rel="stylesheet" href="assets/css/extras.css">
   <link rel="stylesheet" href="assets/css/accordian.css">
+  <link rel="stylesheet" href="assets/css/table.css">
   <!-- Script: Navbar on-top -->
   <script src="js/navbar-ontop.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -85,7 +86,8 @@
         <div class="">
           <ul id="content" class="project-content cards text-dark"></ul>
           <!---------------->
-          <script> $.ajax({
+          <script> 
+		  $.ajax({
               type: "GET",
               url: "https://api.blissroms.org/api/allprojects",
               contentType: "application/json",
@@ -2500,6 +2502,45 @@
           <p class="mb-3">We're run by people that donate their free time towards the project. We do our best to bring a quality OS to your device, while working a real job on the side in most cases. Please consider showing us we're on the right track by clicking the button below.</p> <a href="https://opencollective.com/blisslabs/donate" class="btn btn-primary">Buy Us a Coffee</a>
         </div>
         <div class="col-md-4 pb-4"> <img class="img-fluid d-block" src="assets/images/coffee-break.svg"> </div>
+      </div>
+    </div>
+  </div>
+  <div class="pt-5 bg-secondary" id="our_team">
+    <div class="container">
+      <div class="row text-center align-items-center justify-content-center" style="display: block;">
+        <div class=" text-center pb-4">
+          <h1 class="mb-4 text-white">BlissLabs Volunteers &amp; Team-Leads</h1>
+          <h3>Here are all the people that help run things</h3>
+          <!-- <p class="mb-3">We're run by people that donate their free time towards the project. We do our best to bring a quality OS to your device, while working a real job on the side in most cases. Please consider showing us we're on the right track by clicking the button below.</p> <a href="https://opencollective.com/blisslabs/donate" class="btn btn-primary">Buy Us a Coffee</a> -->
+			<div class="tab-content mt-2">
+				<div class="tab-pane fade show active" id="tabone" role="tabpanel">
+					<section id="team_content" class="team_content"></section>
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+					<script>
+						$.ajax({
+							type: "GET",
+							url: "https://api.blissroms.org/api/teambliss", // TeamBliss JSON
+							success: function (data) {
+								var teamContent = ''; // Variable to hold HTML
+								for (var i = 0; i < data.length; i++) { // Loop through object
+									<!-- if ($.inArray(data[i].member, ['Jon West', 'utzcoz', 'Jackeagle', 'hmtheboy154']) >= 0) { -->
+										teamContent += '<div id="event" class="team_item">';
+										teamContent += '<img class="image crop" src="' + data[i].avatar + '" ';
+										teamContent += 'alt="' + data[i].member + '" />';
+										teamContent += '<h3>' + data[i].member + '</h3>';
+										teamContent += '<p class="team_data_text font-weight-bold">' + data[i].designation + '</p>';
+										// teamContent += '<p class="team_data_text font-weight-bold"><i>&quot;' + data[i].email + '&quot;</i></p>';
+										teamContent += '</div>';
+									<!-- } -->
+								}
+								// Update the page with the new content
+								document.getElementById('team_content').innerHTML = teamContent;
+							}
+						})
+					</script>
+				</div>
+			</div>
+		</div>
       </div>
     </div>
   </div>
