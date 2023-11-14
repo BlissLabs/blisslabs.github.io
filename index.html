@@ -21,8 +21,7 @@
   <!-- Script: Navbar on-top -->
   <script src="js/navbar-ontop.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <style>
-	@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400&display=swap');
+  <style> @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400&display=swap');
   </style>
 </head>
 
@@ -30,7 +29,7 @@
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div class="container"> <a class="navbar-brand" href="#">
         <img class="img-fluid d-inline mx-auto align-middle mnav" src="assets/images/Lotus_white.png" width="52px" style="padding-bottom: 0.4rem; ">
-        <b style="font-family: 'Manrope', sans-serif;" >BlissLabs</b>
+        <b style="font-family: 'Manrope', sans-serif;">BlissLabs</b>
       </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar10">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -40,108 +39,229 @@
           <li class="nav-item"> <a class="nav-link" href="#about">About</a> </li>
           <li class="nav-item"> <a class="nav-link" href="#numbers">Expenses</a> </li>
           <li class="nav-item"> <a class="nav-link" href="#volunteer">Volunteer</a> </li>
-        </ul> 
-		<a class="btn navbar-btn ml-md-2 btn-light text-dark" href="https://opencollective.com/blisslabs/donate" target="_blank">Donate</a>
-		<!-- <a class="btn navbar-btn ml-md-2 brightness" href="https://opencollective.com/blisslabs/donate" target="_blank"> -->
-  <!-- <img src="https://opencollective.com/webpack/donate/button@2x.png?color=blue" style="width: 40%; display: flex; justify-content: right;" /> -->
-<!-- </a> -->
-	  </div>
+        </ul>
+        <a class="btn navbar-btn ml-md-2 btn-light text-dark" href="https://opencollective.com/blisslabs/donate" target="_blank">Donate</a>
+        <!-- <a class="btn navbar-btn ml-md-2 brightness" href="https://opencollective.com/blisslabs/donate" target="_blank"> -->
+        <!-- <img src="https://opencollective.com/webpack/donate/button@2x.png?color=blue" style="width: 40%; display: flex; justify-content: right;" /> -->
+        <!-- </a> -->
+      </div>
     </div>
   </nav>
   <div class="text-center cover d-flex flex-column">
-    <header id="header">
-      <div class="vert-text">
-        <div class="p-img-n" style="padding-bottom:1.7rem;">
-          <img src="assets/images/bliss_labs_logo.svg" width="240px">
-        </div>
-        <h1 id="typer-size">
-          <!-- TEXTS -->
-          <span id="typed"></span>
-          <div id="typed-strings">
-            <p>We Are A Non-Profit</p>
-            <p>We Are A Global Host</p>
-            <p>We Help Open-Source Projects</p>
-            <p>We Help Build Communities</p>
-            <p>We Help Build Projects</p>
-            <p>We Help Others Learn Through Our Projects</p>
+    <header id="header" style="">
+      <div class="vert-text cover">
+        <div class="carousel slide carousel-fade" data-ride="carousel" id="carouselExampleIndicators">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"> </li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"> </li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"> </li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"> </li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"> </li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active "> <img class="cover d-block img-fluid w-100 h-75" src="https://static.pingendo.com/cover-bubble-dark.svg" style="opacity: 0.0;">
+              <div class="carousel-caption pb-5 mb-5 justify-content-center align-items-center flex-grow-1 flex-column d-inline-flex">
+                <div class="p-img-n">
+                  <img src="assets/images/bliss_labs_logo.svg" width="240px">
+                </div>
+                <h3 class="mt-5">We Are A Non-Profit</h3>
+                <h5>We are a volunteer run 501c3 non-profit organization, that helps open-source projects worldwide </h5>
+              </div>
+            </div>
+            <div class="carousel-item "> <img class="cover d-block img-fluid w-100 h-75" src="https://static.pingendo.com/cover-bubble-dark.svg" style="opacity: 0.0;">
+              <div class="carousel-caption pb-5 mb-5">
+                <div class="p-img-n">
+                  <img src="assets/images/bliss_labs_logo.svg" width="240px">
+                </div>
+                <h3 class="mt-5">We Are A Global Fiscal Host</h3>
+                <h5>We act as a hub for global inclusiveness in all aspects of development. Giving those that need, access to infrastructure support, and fiscal growth opportunities, </h5>
+              </div>
+            </div>
+            <div class="carousel-item"> <img class="cover d-block img-fluid w-100 h-75" src="https://static.pingendo.com/cover-bubble-light.svg" style="	opacity: 0.0;">
+              <div class="carousel-caption pb-5 mb-5">
+                <div class="p-img-n">
+                  <img src="assets/images/bliss_labs_logo.svg" width="240px">
+                </div>
+                <h3 class="mt-5">We Help Open-Source Projects</h3>
+                <h5>We share a vision with the projects we help, and through this, we assist them in their success</h5>
+              </div>
+            </div>
+            <div class="carousel-item"> <img class="cover d-block img-fluid w-100 h-75" src="https://static.pingendo.com/cover-bubble-light.svg" style="opacity: 0.0;">
+              <div class="carousel-caption pb-5 mb-5">
+                <div class="p-img-n">
+                  <img src="assets/images/bliss_labs_logo.svg" width="240px">
+                </div>
+                <h3 class="mt-5">We Help Build Communities</h3>
+                <h5>with indicators</h5>
+              </div>
+            </div>
+            <div class="carousel-item"> <img class="cover d-block img-fluid w-100 h-75" src="https://static.pingendo.com/cover-bubble-light.svg" style="opacity: 0.0;">
+              <div class="carousel-caption pb-5 mb-5">
+                <div class="p-img-n">
+                  <img src="assets/images/bliss_labs_logo.svg" width="240px">
+                </div>
+                <h3 class="mt-5">We Are Innovating The Future</h3>
+                <h5>with indicators</h5>
+              </div>
+            </div>
           </div>
-          <!-- TEXTS ENDS -->
-        </h1>
-        <!-- TITLE -->
-        <h3>We're Building An Open &amp Sustainable Future</h3>
-		<br><br>
-        <h6>Scroll Down To Find Out How</h6>
-        <a href="#projects" class="scroll-down"></a>
+        </div>
       </div>
     </header>
-    <div id="projects" class="py-4 filter-ldark cover full-width bg-fixed text-light w-100" style="background-image: url(&quot;https://i.imgur.com/352qhqA.png&quot;); background-position: left top; background-size: cover; ">
-      <div class="container">
-        <div class="row">
-          <div class="mx-auto col-md-8">
-            <!-- <h1 class="mb-3">BlissLabs Projects</h1> -->
-			<h3 class="display-3 text-center" style=""><b>BlissLabs Projects</b></h3>
-            <p class="lead">We help start, maintain and support various community and open-source projects. Explore more about our projects below </p>
+  </div>
+  <div class="py-5" style="	background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="text-center col-md-12">
+          <h1 class="text-light">Featured Projects</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 p-3">
+          <div class="card bg-light">
+            <div class="card-body p-4 bg-dark">
+              <div class="row">
+                <div class="col-8 col-md-12 mb-3">
+                  <img class="img-fluid d-block rounded-circle mx-auto" src="https://avatars.githubusercontent.com/u/22484687?s=400&amp;u=0a11f21346afd1f0f0caa2b9f37fd923272fa50b&amp;v=4" height="200" width="200">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-8 col-md-12">
+                  <h3 class="mb-0">BlissOS</h3>
+                </div>
+              </div>
+              <p class="my-3">An Open Source OS, based on Android-x86 for Windows, ChromeOS &amp; Linux PC hardware that brings all the features and options of Bliss ROM, and more to your PC, and is available in many different configurations.</p>
+              <ul class="pl-3">
+                <li>1,196,000+ Yearly Downloads</li>
+                <li>Support for x86/x86_64 hardware</li>
+                <li>Android 11/12/13</li>
+              </ul>
+              <h6 class="text-muted">Stat Sources: <a href="https://sourceforge.net/projects/blissos-x86/files/stats/timeline?dates=2022-11-14+to+2023-11-14">stable</a>, <a href="https://sourceforge.net/projects/blissos-dev/files/stats/timeline?dates=2022-11-14+to+2023-11-14">beta</a></h6>
+              <h6 class="text-muted">Git Sources: <a href="https://github.com/BlissRoms-x86">A8-A12</a>, <a href="https://github.com/BlissOS">A13/A14</a></h6>
+              <a class="btn btn-primary mt-3" href="https://blissos.org" target="_blank">Visit Website</a>
+            </div>
           </div>
         </div>
-        <div class="">
-          <ul id="content" class="project-content cards text-dark"></ul>
-          <!---------------->
-          <script> 
-		  $.ajax({
-              type: "GET",
-              url: "https://api.blissroms.org/api/allprojects",
-              contentType: "application/json",
-              datatype: "json",
-              data: {},
-              success: function(data) {
-                var colorsArray = ['rgba(100, 100, 100, 0.7)', 'rgba(48, 48, 48, 0.7)', 'rgba(0, 168, 236, 0.7)', 'rgba(0, 128, 255, 0.7)', 'rgba(0, 96, 170, 0.7)', 'rgba(137, 124, 178, 0.7)', 'rgba(0, 33, 46, 0.7)'];
-                var uniqueColorIndex = 0;
-                var newContent = ''; // Variable to hold HTML
-                for (var i = 0; i < data.length; i++) { // Loop through object
-                  min = 1
-                  max = colorsArray.length - 1
-                  uniqueColorIndex = Math.floor(min + Math.random() * (max + 1 - min));
-                  if (colorsArray[uniqueColorIndex] == 'undefined') {
-                    uniqueColorIndex = colorsArray.length - 1
-                  }
-                  if (data[i].project != null) {
-                    newContent += '<li class="cards__item">';
-                    newContent += '<div class="card blur badge-dark">';
-                    newContent += '<div class="card__image" style="background-color: ' + colorsArray[uniqueColorIndex] + ';">';
-                    newContent += '<img class="img-fluid d-block mb-3 mt-3 mx-auto" src="' + data[i].project_avatar + '" style="max-width: auto; height: 150px;" ';
-                    newContent += 'alt="' + data[i].project + ' " style="padding-top: 1.5rem;"/>';
-                    newContent += '</div>';
-                    newContent += '<div class="card__content">';
-                    newContent += '<div class="card__title" style="padding-top: 1.7rem; padding-left: 1rem; padding-right: 1rem;"></div?';
-                    newContent += '<h3><b style="font-size: xx-large;">' + data[i].project + '</b></h3>';
-                    newContent += '<p class="card__text">' + data[i].project_description + '</p>';
-                    newContent += '<h6>Project Lead: ' + data[i].project_lead + '</h6>';
-                    if (data[i].project_github != null) {
-                      newContent += '<a href="' + data[i].project_github + '" target="_blank"><i class="fab fa fa-git p-2" style="font-size: 300%;"></i></a>';
-                    }
-                    if (data[i].project_website != null) {
-                      newContent += '<a href="' + data[i].project_website + '" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a>';
-                    }
-                    newContent += '</div>';
-                    newContent += '</div>';
-                    newContent += '</li>';
-                  } else {
-                    newContent = '<div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/BlissIcon.png" width="150"><h2>Bliss OS</h2><a href="https://github.com/BlissRoms-x86" target="_blank"><i class="fa fa fa-github p-2" style="font-size: 300%;"></i></a><a href="https://blissos.org" target="_blank"><i class="fa fa p-2 fa-globe" style="font-size: 300%;"></i></a><p class="mb-0">Bliss OS brings all the features and options of Bliss ROM to your PC, tablet, chromebook and mackbook. and is available in many different configurations.</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="https://avatars0.githubusercontent.com/u/65220149?s=200&amp;v=4" width="150"><h1>Boringdroid</h1><a href="https://github.com/boringdroid" target="_blank"><i class="fa fa-github p-2" style="font-size: 300%;"></i></a><p class="mb-0">Boringdroid is a boring project to provide patch set to run multi-window on low version AOSP.</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="https://i.imgur.com/bTd1SMo.png" width="150"><h1>Android-Generic Project</h1><a href="https://gitlab.com/android-generic/vendor_android-generic" target="_blank"><i class="fa fa-git p-2" style="font-size: 300%;"></i></a><p class="mb-0">Bringing Android ROMs to PCs and GSI devices everywhere. Simple to start, easy to use. Go get your ROM on!</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/SG_Asset_2.png" width="138"><h1>Supreme Gamers</h1><a href="https://supreme-gamers.com/" target="_blank"><i class="fa fa-google p-2" style="font-size: 300%;"></i></a><a href="https://gitlab.com/AXIM0S/vendor-gearlock" target="_blank"><i class="fa fa-git p-2" style="font-size: 300%;"></i></a><p class="mb-0">Android-x86 Gaming Community and creators of Gearlock Recovery for Android-x86 based projects</p></div></div>';
-                  }
-                }
-                // Update the page with the new content
-                document.getElementById('content').innerHTML = newContent;
-              },
-              error: function(jqXHR, status, err) {
-                newContent = '<div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/BlissIcon.png" width="150"><h2>Bliss OS</h2><a href="https://github.com/BlissRoms-x86" target="_blank"><i class="fa fa fa-github p-2" style="font-size: 300%;"></i></a><a href="https://blissos.org" target="_blank"><i class="fa fa p-2 fa-globe" style="font-size: 300%;"></i></a><p class="mb-0">Bliss OS brings all the features and options of Bliss ROM to your PC, tablet, chromebook and mackbook. and is available in many different configurations.</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="https://avatars0.githubusercontent.com/u/65220149?s=200&amp;v=4" width="150"><h1>Boringdroid</h1><a href="https://github.com/boringdroid" target="_blank"><i class="fa fa-github p-2" style="font-size: 300%;"></i></a><p class="mb-0">Boringdroid is a boring project to provide patch set to run multi-window on low version AOSP.</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="https://i.imgur.com/bTd1SMo.png" width="150"><h1>Android-Generic Project</h1><a href="https://gitlab.com/android-generic/vendor_android-generic" target="_blank"><i class="fa fa-git p-2" style="font-size: 300%;"></i></a><p class="mb-0">Bringing Android ROMs to PCs and GSI devices everywhere. Simple to start, easy to use. Go get your ROM on!</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/SG_Asset_2.png" width="138"><h1>Supreme Gamers</h1><a href="https://supreme-gamers.com/" target="_blank"><i class="fa fa-google p-2" style="font-size: 300%;"></i></a><a href="https://gitlab.com/AXIM0S/vendor-gearlock" target="_blank"><i class="fa fa-git p-2" style="font-size: 300%;"></i></a><p class="mb-0">Android-x86 Gaming Community and creators of Gearlock Recovery for Android-x86 based projects</p></div></div>';
-                document.getElementById('content').innerHTML = newContent;
-                alert("Status: " + textStatus);
-                alert("Error: " + errorThrown);
-              }
-            })
-          </script>
-          <!---------------->
+        <div class="col-lg-4 col-md-6 p-3">
+          <div class="card bg-light">
+            <div class="card-body p-4 bg-dark">
+              <div class="row">
+                <div class="col-8 col-md-12 mb-3">
+                  <img class="img-fluid d-block rounded-circle mx-auto bg-info" src="https://avatars.githubusercontent.com/u/82235690?s=400&amp;u=107ea2f83479d4fea58160faf3177f9c730de0ad&amp;v=4" height="200" width="200">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-8 col-md-12">
+                  <h3 class="mb-0">Waydroid</h3>
+                </div>
+              </div>
+              <p class="my-3">Waydroid uses a container-based approach to boot a full Android system on a regular GNU/Linux system like Ubuntu.</p>
+              <ul class="pl-3">
+                <li>775,000+ Yearly Downloads</li>
+                <li>Support for arm/arm64/x86/x86_64 hardware</li>
+                <li>Android 11</li>
+              </ul>
+              <h6 class="text-muted">Stat Sources: <a href="https://sourceforge.net/projects/waydroid/files/stats/timeline?dates=2022-11-14+to+2023-11-14">stable</a></h6>
+              <h6 class="text-muted">Git Sources: <a href="https://github.com/waydroid">A9-A13</a></h6>
+              <a class="btn btn-primary mt-3" href="https://waydro.id" target="_blank">Visit Website</a>
+            </div>
+          </div>
         </div>
+        <div class="col-lg-4 p-3">
+          <div class="card bg-light">
+            <div class="card-body p-4 bg-dark">
+              <div class="row">
+                <div class="col-8 col-md-12 mb-3">
+                  <img class="img-fluid d-block rounded-circle mx-auto" src="https://avatars.githubusercontent.com/u/16156670?s=400&amp;u=daebf9708e04bd24c53231900690089c7141e2de&amp;v=4" height="200" width="200">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-8 col-md-12">
+                  <h3 class="mb-0">BlissROMs</h3>
+                </div>
+              </div>
+              <p class="my-3">A fully featured replacement OS for your Android device based off AOSP, bringing many customizations, features, and optimizations to your device.</p>
+              <ul class="pl-3">
+                <li>131,000+ Yearly Downloads</li>
+                <li>Support for arm/arm64 hardware</li>
+                <li>Android 13</li>
+              </ul>
+              <h6 class="text-muted">Stat Sources: <a href="https://sourceforge.net/projects/blissroms/files/stats/timeline?dates=2022-11-14+to+2023-11-14">SF</a>, <a href="&#10;https://downloads.blissroms.org/api/v1/download/count/all/&#10;">downloads</a></h6>
+              <h6 class="text-muted">Git Sources: <a href="https://github.com/BlissRoms">A8-A14</a>, <a href="https://github.com/BlissRoms-Devices">devices</a></h6>
+              <a class="btn btn-primary mt-3" href="https://blissroms.org" target="_blank">Visit Website</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="projects" class="py-4 filter-ldark cover full-width bg-fixed text-light w-100 h-75" style="background-image: url(&quot;https://i.imgur.com/352qhqA.png&quot;); background-position: left top; background-size: cover;">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto col-md-8">
+          <!-- <h1 class="mb-3">BlissLabs Projects</h1> -->
+          <h3 class="display-3 text-center" style=""><b>BlissLabs Projects</b></h3>
+          <p class="lead">We help start, maintain and support various community and open-source projects with over a million combined downloads per year. Explore more about our projects below </p>
+        </div>
+      </div>
+      <div class="container">
+        <ul id="content" class="project-content cards text-dark"></ul>
+        <!---------------->
+        <script>
+          $.ajax({
+            type: "GET",
+            url: "https://api.blissroms.org/api/allprojects",
+            contentType: "application/json",
+            datatype: "json",
+            data: {},
+            success: function(data) {
+              var colorsArray = ['rgba(100, 100, 100, 0.7)', 'rgba(48, 48, 48, 0.7)', 'rgba(0, 168, 236, 0.7)', 'rgba(0, 128, 255, 0.7)', 'rgba(0, 96, 170, 0.7)', 'rgba(137, 124, 178, 0.7)', 'rgba(0, 33, 46, 0.7)'];
+              var uniqueColorIndex = 0;
+              var newContent = ''; // Variable to hold HTML
+              for (var i = 0; i < data.length; i++) { // Loop through object
+                min = 1
+                max = colorsArray.length - 1
+                uniqueColorIndex = Math.floor(min + Math.random() * (max + 1 - min));
+                if (colorsArray[uniqueColorIndex] == 'undefined') {
+                  uniqueColorIndex = colorsArray.length - 1
+                }
+                if (data[i].project != null) {
+                  newContent += '<li class="cards__item">';
+                  newContent += '<div class="card blur badge-dark">';
+                  newContent += '<div class="card__image" style="background-color: ' + colorsArray[uniqueColorIndex] + ';">';
+                  newContent += '<img class="img-fluid d-block mb-3 mt-3 mx-auto" src="' + data[i].project_avatar + '" style="max-width: auto; height: 150px;" ';
+                  newContent += 'alt="' + data[i].project + ' " style="padding-top: 1.5rem;"/>';
+                  newContent += '</div>';
+                  newContent += '<div class="card__content">';
+                  newContent += '<div class="card__title" style="padding-top: 1.7rem; padding-left: 1rem; padding-right: 1rem;"></div?';
+                  newContent += '<h3><b style="font-size: xx-large;">' + data[i].project + '</b></h3>';
+                  newContent += '<p class="card__text">' + data[i].project_description + '</p>';
+                  newContent += '<h6>Project Lead: ' + data[i].project_lead + '</h6>';
+                  if (data[i].project_github != null) {
+                    newContent += '<a href="' + data[i].project_github + '" target="_blank"><i class="fab fa fa-git p-2" style="font-size: 300%;"></i></a>';
+                  }
+                  if (data[i].project_website != null) {
+                    newContent += '<a href="' + data[i].project_website + '" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a>';
+                  }
+                  newContent += '</div>';
+                  newContent += '</div>';
+                  newContent += '</li>';
+                } else {
+                  newContent = '<div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/BlissIcon.png" width="150"><h2>Bliss OS</h2><a href="https://github.com/BlissRoms-x86" target="_blank"><i class="fa fa fa-github p-2" style="font-size: 300%;"></i></a><a href="https://blissos.org" target="_blank"><i class="fa fa p-2 fa-globe" style="font-size: 300%;"></i></a><p class="mb-0">Bliss OS brings all the features and options of Bliss ROM to your PC, tablet, chromebook and mackbook. and is available in many different configurations.</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="https://avatars0.githubusercontent.com/u/65220149?s=200&amp;v=4" width="150"><h1>Boringdroid</h1><a href="https://github.com/boringdroid" target="_blank"><i class="fa fa-github p-2" style="font-size: 300%;"></i></a><p class="mb-0">Boringdroid is a boring project to provide patch set to run multi-window on low version AOSP.</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="https://i.imgur.com/bTd1SMo.png" width="150"><h1>Android-Generic Project</h1><a href="https://gitlab.com/android-generic/vendor_android-generic" target="_blank"><i class="fa fa-git p-2" style="font-size: 300%;"></i></a><p class="mb-0">Bringing Android ROMs to PCs and GSI devices everywhere. Simple to start, easy to use. Go get your ROM on!</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/SG_Asset_2.png" width="138"><h1>Supreme Gamers</h1><a href="https://supreme-gamers.com/" target="_blank"><i class="fa fa-google p-2" style="font-size: 300%;"></i></a><a href="https://gitlab.com/AXIM0S/vendor-gearlock" target="_blank"><i class="fa fa-git p-2" style="font-size: 300%;"></i></a><p class="mb-0">Android-x86 Gaming Community and creators of Gearlock Recovery for Android-x86 based projects</p></div></div>';
+                }
+              }
+              // Update the page with the new content
+              document.getElementById('content').innerHTML = newContent;
+            },
+            error: function(jqXHR, status, err) {
+              newContent = '<div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/BlissIcon.png" width="150"><h2>Bliss OS</h2><a href="https://github.com/BlissRoms-x86" target="_blank"><i class="fa fa fa-github p-2" style="font-size: 300%;"></i></a><a href="https://blissos.org" target="_blank"><i class="fa fa p-2 fa-globe" style="font-size: 300%;"></i></a><p class="mb-0">Bliss OS brings all the features and options of Bliss ROM to your PC, tablet, chromebook and mackbook. and is available in many different configurations.</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="https://avatars0.githubusercontent.com/u/65220149?s=200&amp;v=4" width="150"><h1>Boringdroid</h1><a href="https://github.com/boringdroid" target="_blank"><i class="fa fa-github p-2" style="font-size: 300%;"></i></a><p class="mb-0">Boringdroid is a boring project to provide patch set to run multi-window on low version AOSP.</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="https://i.imgur.com/bTd1SMo.png" width="150"><h1>Android-Generic Project</h1><a href="https://gitlab.com/android-generic/vendor_android-generic" target="_blank"><i class="fa fa-git p-2" style="font-size: 300%;"></i></a><p class="mb-0">Bringing Android ROMs to PCs and GSI devices everywhere. Simple to start, easy to use. Go get your ROM on!</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/SG_Asset_2.png" width="138"><h1>Supreme Gamers</h1><a href="https://supreme-gamers.com/" target="_blank"><i class="fa fa-google p-2" style="font-size: 300%;"></i></a><a href="https://gitlab.com/AXIM0S/vendor-gearlock" target="_blank"><i class="fa fa-git p-2" style="font-size: 300%;"></i></a><p class="mb-0">Android-x86 Gaming Community and creators of Gearlock Recovery for Android-x86 based projects</p></div></div>';
+              document.getElementById('content').innerHTML = newContent;
+              alert("Status: " + textStatus);
+              alert("Error: " + errorThrown);
+            }
+          })
+        </script>
+        <!---------------->
       </div>
     </div>
   </div>
@@ -150,23 +270,13 @@
       <div class="row">
         <div class="text-center col-md-12">
           <!-- <h1>About Us</h1> -->
-			<h3 class="display-3 text-center" style=""><b>About Us</b></h3>
+          <h3 class="display-3 text-center" style=""><b>About Us</b></h3>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12" style=""><br><br>
-			<h2 style="color: #fff;" class="text-center"><b>Our Mission Statement</b></h2>
-			<p class="highlight_secondary lead text-center">Blisslabs is a non profit organization that has a goal to create 
-			and maintain various open source operating systems and other software that helps to extend the life of devices in 
-			order to help with the world's e-waste problems. 
-			<br><br>
-			To do this, we work to mentor and teach future open source developer's in all aspects of development, including 
-			design, and animation and form alliances with other projects that share in our visions. We also develop tools to 
-			help minimize the complex development process and aid in learning. 
-			<br><br>
-			And we act as a global host for open source projects, allowing for a much larger opportunity to work with others 
-			globally and increase user base. 
-			</p>
+          <h2 style="color: #fff;" class="text-center"><b>Our Mission Statement</b></h2>
+          <p class="highlight_secondary lead text-center">Blisslabs is a non profit organization that has a goal to help create and maintain various open source operating systems and other software that helps to extend the life of devices in order to help futher community innovation and help with the world's e-waste problems. <br><br> To do this, we work to create projects, mentor and teach future open source developer's in all aspects of development, design, and animation and form alliances with other projects that share in our visions. We also develop tools to help minimize the complex development process and aid in learning. <br><br> And we act as a global fiscal host for open source projects, allowing for a much larger opportunity to work with others globally and increase user base.<br></p>
         </div>
       </div>
     </div>
@@ -176,7 +286,7 @@
       <div class="row">
         <div class="text-center col-md-12">
           <!-- <h1>Outreach</h1> -->
-			<h3 class="display-3 text-center" style=""><b>Outreach</b></h3>
+          <h3 class="display-3 text-center" style=""><b>Outreach</b></h3>
         </div>
       </div>
       <div class="row">
@@ -2249,251 +2359,17 @@
     <div class="container text-center">
       <!-- <h1 class="text-primary display-4" style="color: #fff;">Transparency</h1> -->
       <h3 class="display-3 text-center" style="color: #fff;"><b>Transparency</b></h3>
-      <p class="text-center lead" style="margin: 5%">We believe in full transparency, but we do not believe this transparency should come at a cost to our supporters. This is why we submit a yearly 990 form to the IRS. If you are interested in looking into that or any other information we submit, feel free to visit our <a style="font-weight: bold !important; color: #0080ff;" target="blank" href="https://www.guidestar.org/profile/82-3580195">Guidestar.org</a> page. If you are interested in looking into any other nonprofit open-source projects or ROMs, they can also be found on Guidestar as long as things are all on the up and up. </p>
+      <p class="text-center lead" style="margin: 5%">We believe in full transparency, but we do not believe this transparency should come at a cost to our supporters. This is why we submit a yearly 990 form to the US IRS. If you are interested in looking into that or any other information we submit, feel free to visit our <a style="font-weight: bold !important; color: #0080ff;" target="blank" href="https://www.guidestar.org/profile/82-3580195">Guidestar.org</a> page.</p>
       <div class="row">
         <div class="col-md-6"><a href="https://www.guidestar.org/profile/82-3580195" target="_blank"><img src="https://widgets.guidestar.org/gximage2?o=9676451&amp;l=v4"></a></div>
         <div class="col-md-6"><a class="btn btn-primary center d-inline-flex justify-content-center align-items-center flex-grow-0 btn-lg my-4 border border-primary" target="blank" href="https://www.guidestar.org/search" style="background-color: rgb(34, 34, 34); color: rgb(255, 255, 255);">Search Guidestar.org</a></div>
       </div>
-      <p class="text-center lead" style="margin: 5%">Guidestar does allow users to view the financial info for each nonprofit, but for those who don't want to give yet another site their personal info, we have posted our statements below</p>
       <!--end Two project row-->
     </div>
   </div>
   <!-- Start wrap sections -->
-  <div class="wrap bg-secondary" id="numbers">
-    <section class="question-section">
-      <h3 class="display-3 text-center" style="color: #fff;"><b>Expenses &amp; Revenue</b></h3>
-      <div class="cat-1">
-        <input id="tab-1" type="radio" name="tabs" tabindex="1">
-        <label for="tab-1">
-          <h2 class="text-center" style="color: #fff;">2020 (Year Four)</h2>
-        </label><!-- end of tab label -->
-        <div class="question-wrap">
-          <div id="expenses" class="row text-center align-items-center justify-content-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)); background-position: left top; background-size: 100%; background-repeat: repeat;">
-            <div class="col-md-12">
-              <section class="counting  d-flex flex-column justify-content-center align-items-center flex-grow-2">
-                <div class="layout ">
-                  <h3 class="text-center" style="color: #fff;">Revenue</h3>
-                  <div class="grid-3" style="">
-                    <span class="count1 counter text-light" style="font-size: 4em !important; color: rgb(0, 128, 255);" data-count="7264">0</span>
-                    <p style="font-size: .6em !important;">Contributions, Grants, Gifts</p>
-                  </div> <!-- /.col-sm-3 -->
-                  <div class="grid-3">
-                    <span class="count2 counter text-light" style="font-size: 4em !important; color: #0080ff;">0</span>
-                    <p style="font-size: .6em !important;">Program Services</p>
-                  </div><!-- /.col-sm-3 -->
-                  <div class="grid-3">
-                    <span class="count3 counter text-light" style="font-size: 4em !important; color: #0080ff;">0</span>
-                    <p style="font-size: .6em !important;">Special Events</p>
-                  </div><!-- /.col-sm-3 -->
-                  <div class="grid-3">
-                    <span class="count4 counter text-light" style="font-size: 4em !important; color: #0080ff;">0</span>
-                    <p style="font-size: .6em !important;">Other Revenue</p>
-                  </div><!-- /.col-sm-3 -->
-                </div>
-              </section>
-              <div class="col-md-12">
-                <section class="counting  d-flex flex-column justify-content-center align-items-center flex-grow-2">
-                  <div class="layout">
-                    <h3 class="text-center" style="color: #fff;">Expenses</h3>
-                    <div class="grid-3">
-                      <span class="counter count1 text-light" style="font-size: 3em !important; color: #0080ff;">0</span>
-                      <p style="font-size: .6em !important;">Program Services &amp; Affiliates</p>
-                    </div> <!-- /.col-sm-3 -->
-                    <div class="grid-3">
-                      <span class="counter count2 text-light" style="font-size: 3em !important; color: #0080ff;" data-count="546">0</span>
-                      <p style="font-size: .6em !important;">Administration</p>
-                    </div><!-- /.col-sm-3 -->
-                    <div class="grid-3">
-                      <span class="counter count3 text-light" style="font-size: 3em !important; color: rgb(0, 128, 255);">0</span>
-                      <p style="font-size: .6em !important;">Fundraising</p>
-                    </div><!-- /.col-sm-3 -->
-                    <div class="grid-3">
-                      <span class="counter count4 text-light" style="font-size: 3em !important; color: #0080ff;" data-count="3302">0</span>
-                      <p style="font-size: .6em !important;">Other Expenses</p>
-                    </div><!-- /.col-sm-3 -->
-                  </div>
-                </section>
-              </div>
-            </div>
-            <!-- End #Contact-->
-          </div>
-        </div>
-      </div><!-- end of Catagory -->
-      <div class="cat-2">
-        <input id="tab-2" type="radio" name="tabs" tabindex="1">
-        <label for="tab-2">
-          <h2 class="text-center" style="color: #fff;">2019 (Year Three)</h2>
-        </label><!-- end of tab label -->
-        <div class="question-wrap">
-          <div id="expenses" class="row text-center align-items-center justify-content-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)); background-position: left top; background-size: 100%; background-repeat: repeat;">
-            <div class="col-md-12">
-              <section class="counting  d-flex flex-column justify-content-center align-items-center flex-grow-2">
-                <div class="layout ">
-                  <h3 class="text-center" style="color: #fff;">Revenue</h3>
-                  <div class="grid-3" style="">
-                    <span class="count1 counter text-light" style="font-size: 4em !important; color: rgb(0, 128, 255);" data-count="2162">0</span>
-                    <p style="font-size: .6em !important;">Contributions, Grants, Gifts</p>
-                  </div> <!-- /.col-sm-3 -->
-                  <div class="grid-3">
-                    <span class="count2 counter text-light" style="font-size: 4em !important; color: #0080ff;">0</span>
-                    <p style="font-size: .6em !important;">Program Services</p>
-                  </div><!-- /.col-sm-3 -->
-                  <div class="grid-3">
-                    <span class="count3 counter text-light" style="font-size: 4em !important; color: #0080ff;">0</span>
-                    <p style="font-size: .6em !important;">Special Events</p>
-                  </div><!-- /.col-sm-3 -->
-                  <div class="grid-3">
-                    <span class="count4 counter text-light" style="font-size: 4em !important; color: #0080ff;">0</span>
-                    <p style="font-size: .6em !important;">Other Revenue</p>
-                  </div><!-- /.col-sm-3 -->
-                </div>
-              </section>
-              <div class="col-md-12">
-                <section class="counting  d-flex flex-column justify-content-center align-items-center flex-grow-2">
-                  <div class="layout">
-                    <h3 class="text-center" style="color: #fff;">Expenses</h3>
-                    <div class="grid-3">
-                      <span class="counter count1 text-light" style="font-size: 3em !important; color: #0080ff;">0</span>
-                      <p style="font-size: .6em !important;">Program Services &amp; Affiliates</p>
-                    </div> <!-- /.col-sm-3 -->
-                    <div class="grid-3">
-                      <span class="counter count2 text-light" style="font-size: 3em !important; color: #0080ff;" data-count="630">0</span>
-                      <p style="font-size: .6em !important;">Administration</p>
-                    </div><!-- /.col-sm-3 -->
-                    <div class="grid-3">
-                      <span class="counter count3 text-light" style="font-size: 3em !important; color: rgb(0, 128, 255);">0</span>
-                      <p style="font-size: .6em !important;">Fundraising</p>
-                    </div><!-- /.col-sm-3 -->
-                    <div class="grid-3">
-                      <span class="counter count4 text-light" style="font-size: 3em !important; color: #0080ff;" data-count="0">0</span>
-                      <p style="font-size: .6em !important;">Other Expenses</p>
-                    </div><!-- /.col-sm-3 -->
-                  </div>
-                </section>
-              </div>
-            </div>
-            <!-- End #Contact-->
-          </div>
-        </div>
-      </div><!-- end of Catagory -->
-      <div class="cat-3">
-        <input id="tab-3" type="radio" name="tabs" tabindex="7">
-        <label for="tab-3">
-          <h2 class="text-center" style="color: #fff;">2018 (Year Two)</h2>
-        </label>
-        <div class="question-wrap">
-          <div id="expenses" class="row text-center align-items-center justify-content-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)); background-position: left top; background-size: 100%; background-repeat: repeat;">
-            <div class="col-md-12">
-              <section class="counting  d-flex flex-column justify-content-center align-items-center flex-grow-2">
-                <div class="layout ">
-                  <h3 class="text-center" style="color: #fff;">Revenue</h3>
-                  <div class="grid-3" style="">
-                    <span class="count1 counter text-light" style="font-size: 4em !important; color: rgb(0, 128, 255);" data-count="480">0</span>
-                    <p style="font-size: .6em !important;">Contributions, Grants, Gifts</p>
-                  </div> <!-- /.col-sm-3 -->
-                  <div class="grid-3">
-                    <span class="count2 counter text-light" style="font-size: 4em !important; color: #0080ff;">0</span>
-                    <p style="font-size: .6em !important;">Program Services</p>
-                  </div><!-- /.col-sm-3 -->
-                  <div class="grid-3">
-                    <span class="count3 counter text-light" style="font-size: 4em !important; color: #0080ff;">0</span>
-                    <p style="font-size: .6em !important;">Special Events</p>
-                  </div><!-- /.col-sm-3 -->
-                  <div class="grid-3">
-                    <span class="count4 counter text-light" style="font-size: 4em !important; color: #0080ff;">0</span>
-                    <p style="font-size: .6em !important;">Other Revenue</p>
-                  </div><!-- /.col-sm-3 -->
-                </div>
-              </section>
-              <div class="col-md-12">
-                <section class="counting  d-flex flex-column justify-content-center align-items-center flex-grow-2">
-                  <div class="layout">
-                    <h3 class="text-center" style="color: #fff;">Expenses</h3>
-                    <div class="grid-3">
-                      <span class="counter count1 text-light" style="font-size: 3em !important; color: #0080ff;">0</span>
-                      <p style="font-size: .6em !important;">Program Services &amp; Affiliates</p>
-                    </div> <!-- /.col-sm-3 -->
-                    <div class="grid-3">
-                      <span class="counter count2 text-light" style="font-size: 3em !important; color: #0080ff;" data-count="578">0</span>
-                      <p style="font-size: .6em !important;">Administration</p>
-                    </div><!-- /.col-sm-3 -->
-                    <div class="grid-3">
-                      <span class="counter count3 text-light" style="font-size: 3em !important; color: rgb(0, 128, 255);">0</span>
-                      <p style="font-size: .6em !important;">Fundraising</p>
-                    </div><!-- /.col-sm-3 -->
-                    <div class="grid-3">
-                      <span class="counter count4 text-light" style="font-size: 3em !important; color: #0080ff;" data-count="295">0</span>
-                      <p style="font-size: .6em !important;">Other Expenses</p>
-                    </div><!-- /.col-sm-3 -->
-                  </div>
-                </section>
-              </div>
-            </div>
-            <!-- End #Contact-->
-          </div>
-        </div>
-      </div>
-      <div class="cat-4">
-        <input id="tab-4" type="radio" name="tabs" tabindex="16">
-        <label for="tab-4">
-          <h2 class="text-center" style="color: #fff;">2017 (Year One)</h2>
-        </label>
-        <div class="question-wrap">
-          <div id="expenses" class="row text-center align-items-center justify-content-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)); background-position: left top; background-size: 100%; background-repeat: repeat;">
-            <div class="col-md-12">
-              <section class="counting  d-flex flex-column justify-content-center align-items-center flex-grow-2">
-                <div class="layout ">
-                  <h3 class="text-center" style="color: #fff;">Revenue</h3>
-                  <div class="grid-3" style="">
-                    <span class="count1 counter text-light" style="font-size: 3em !important; color: rgb(0, 128, 255);" data-count="889">0</span>
-                    <p style="font-size: .6em !important;">Contributions, Grants, Gifts</p>
-                  </div> <!-- /.col-sm-3 -->
-                  <div class="grid-3">
-                    <span class="count2 counter text-light" style="font-size: 3em !important; color: #0080ff;">0</span>
-                    <p style="font-size: .6em !important;">Program Services</p>
-                  </div><!-- /.col-sm-3 -->
-                  <div class="grid-3">
-                    <span class="count3 counter text-light" style="font-size: 3em !important; color: #0080ff;">0</span>
-                    <p style="font-size: .6em !important;">Special Events</p>
-                  </div><!-- /.col-sm-3 -->
-                  <div class="grid-3">
-                    <span class="count4 counter text-light" style="font-size: 3em !important; color: #0080ff;">0</span>
-                    <p style="font-size: .6em !important;">Other Revenue</p>
-                  </div><!-- /.col-sm-3 -->
-                </div>
-              </section>
-              <div class="col-md-12">
-                <section class="counting  d-flex flex-column justify-content-center align-items-center flex-grow-2">
-                  <div class="layout">
-                    <h3 class="text-center" style="color: #fff;">Expenses</h3>
-                    <div class="grid-3">
-                      <span class="counter count1 text-light" style="font-size: 3em !important; color: #0080ff;">0</span>
-                      <p style="font-size: .6em !important;">Program Services &amp; Affiliates</p>
-                    </div> <!-- /.col-sm-3 -->
-                    <div class="grid-3">
-                      <span class="counter count2 text-light" style="font-size: 3em !important; color: #0080ff;" data-count="360">0</span>
-                      <p style="font-size: .6em !important;">Administration</p>
-                    </div><!-- /.col-sm-3 -->
-                    <div class="grid-3">
-                      <span class="counter count3 text-light" style="font-size: 3em !important; color: rgb(0, 128, 255);">0</span>
-                      <p style="font-size: .6em !important;">Fundraising</p>
-                    </div><!-- /.col-sm-3 -->
-                    <div class="grid-3">
-                      <span class="counter count4 text-light" style="font-size: 3em !important; color: #0080ff;" data-count="295">0</span>
-                      <p style="font-size: .6em !important;">Other Expenses</p>
-                    </div><!-- /.col-sm-3 -->
-                  </div>
-                </section>
-              </div>
-            </div>
-            <!-- End #Contact-->
-          </div>
-        </div>
-      </div>
-    </section><!-- End of Questions -->
-  </div>
   <!-- End wrap sections -->
-  <div class="pt-5" id="volunteer">
+  <div class="pt-5 bg-primary" id="volunteer">
     <div class="container">
       <div class="row">
         <div class="px-md-5 col-md-8 pb-4">
@@ -2512,35 +2388,35 @@
           <h1 class="mb-4 text-white">BlissLabs Volunteers &amp; Team-Leads</h1>
           <h3>Here are all the people that help run things</h3>
           <!-- <p class="mb-3">We're run by people that donate their free time towards the project. We do our best to bring a quality OS to your device, while working a real job on the side in most cases. Please consider showing us we're on the right track by clicking the button below.</p> <a href="https://opencollective.com/blisslabs/donate" class="btn btn-primary">Buy Us a Coffee</a> -->
-			<div class="tab-content mt-2">
-				<div class="tab-pane fade show active" id="tabone" role="tabpanel">
-					<section id="team_content" class="team_content"></section>
-					<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-					<script>
-						$.ajax({
-							type: "GET",
-							url: "https://api.blissroms.org/api/teambliss", // TeamBliss JSON
-							success: function (data) {
-								var teamContent = ''; // Variable to hold HTML
-								for (var i = 0; i < data.length; i++) { // Loop through object
-									<!-- if ($.inArray(data[i].member, ['Jon West', 'utzcoz', 'Jackeagle', 'hmtheboy154']) >= 0) { -->
-										teamContent += '<div id="event" class="team_item">';
-										teamContent += '<img class="image crop" src="' + data[i].avatar + '" ';
-										teamContent += 'alt="' + data[i].member + '" />';
-										teamContent += '<h3>' + data[i].member + '</h3>';
-										teamContent += '<p class="team_data_text font-weight-bold">' + data[i].designation + '</p>';
-										// teamContent += '<p class="team_data_text font-weight-bold"><i>&quot;' + data[i].email + '&quot;</i></p>';
-										teamContent += '</div>';
-									<!-- } -->
-								}
-								// Update the page with the new content
-								document.getElementById('team_content').innerHTML = teamContent;
-							}
-						})
-					</script>
-				</div>
-			</div>
-		</div>
+          <div class="tab-content mt-2">
+            <div class="tab-pane fade show active" id="tabone" role="tabpanel">
+              <section id="team_content" class="team_content"></section>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+              <script>
+                $.ajax({
+                  type: "GET",
+                  url: "https://api.blissroms.org/api/teambliss", // TeamBliss JSON
+                  success: function(data) {
+                    var teamContent = ''; // Variable to hold HTML
+                    for (var i = 0; i < data.length; i++) { // Loop through object
+                      <!-- if ($.inArray(data[i].member, ['Jon West', 'utzcoz', 'Jackeagle', 'hmtheboy154']) >= 0) { -->
+                      teamContent += '<div id="event" class="team_item">';
+                      teamContent += '<img class="image crop" src="' + data[i].avatar + '" ';
+                      teamContent += 'alt="' + data[i].member + '" />';
+                      teamContent += '<h3>' + data[i].member + '</h3>';
+                      teamContent += '<p class="team_data_text font-weight-bold">' + data[i].designation + '</p>';
+                      // teamContent += '<p class="team_data_text font-weight-bold"><i>&quot;' + data[i].email + '&quot;</i></p>';
+                      teamContent += '</div>';
+                      <!-- } -->
+                    }
+                    // Update the page with the new content
+                    document.getElementById('team_content').innerHTML = teamContent;
+                  }
+                })
+              </script>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -2551,13 +2427,8 @@
           <h3 class="text-primary display-3"> <b>Join Our Team</b></h3>
           <h2 class="">We are accepting applications now</h2>
           <p class="text-warning">* only volunteer positions currently available. Internships coming soon *</p>
-          <p class="mb-3" >We are accepting people in small manageable groups while we grow, 
-		  and we tend to lean towards the type of people that want to learn and grow with BlissLabs. We 
-		  provide the tools, knowledge and the mentorship needed to help bring your development dreams to reality, and 
-		  all we ask in return is a minimum contribution towards one of our projects while you learn and grow in your strengths. 
-		  If you're an individual and would like to apply to join our team, please use the button below 
-		  </p> 
-		  <a href="https://goo.gl/forms/PdiaAj1PojosmehK2" class="btn btn-primary">Join Our Team</a>
+          <p class="mb-3">We are accepting people in small manageable groups while we grow, and we tend to lean towards the type of people that want to learn and grow with BlissLabs. We provide the tools, knowledge and the mentorship needed to help bring your development dreams to reality, and all we ask in return is a minimum contribution towards one of our projects while you learn and grow in your strengths. If you're an individual and would like to apply to join our team, please use the button below </p>
+          <a href="https://goo.gl/forms/PdiaAj1PojosmehK2" class="btn btn-primary">Join Our Team</a>
         </div>
       </div>
     </div>
@@ -2637,6 +2508,7 @@
   <script src="js/smooth-scroll.js"></script>
   <script src="js/script.js"></script>
   <script src="js/counter.js"></script>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
 </body>
 
 </html>
