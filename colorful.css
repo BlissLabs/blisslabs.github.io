@@ -6565,3 +6565,41 @@ html, body {
   padding: 1em 1.5em;
   display: block;
   word-wrap: break-word; }
+
+@-webkit-keyframes typing {
+  from {
+    width: 0; } }
+
+@-webkit-keyframes blink-caret {
+  50% {
+    border-color: transparent; } }
+
+.typing1 {
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: typing 8s steps(14, end), blink-caret 0.5s step-end infinite alternate; }
+
+.typing2 {
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: typing 8s steps(14, end), blink-caret 0.5s step-end infinite alternate; }
+
+.typing3 {
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: typing 8s steps(14, end), blink-caret 0.5s step-end infinite alternate; }
+
+.typing4 {
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: typing 8s steps(14, end), blink-caret 0.5s step-end infinite alternate; }
+
+.typing5 {
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: typing 8s steps(14, end), blink-caret 0.5s step-end infinite alternate; }
+
+.typing6 {
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: typing 8s steps(14, end), blink-caret 0.5s step-end infinite alternate; }

@@ -65,7 +65,7 @@
                   <img src="assets/images/bliss_labs_logo.svg" width="240px">
                 </div>
                 <h3 class="mt-5">We Are A Non-Profit</h3>
-                <h5>We are a volunteer run 501c3 non-profit organization, that helps open-source projects worldwide </h5>
+                <h5>We are a volunteer run 501c3 non-profit organization, that helps open-source projects worldwide</h5>
               </div>
             </div>
             <div class="carousel-item "> <img class="cover d-block img-fluid w-100 h-75" src="https://static.pingendo.com/cover-bubble-dark.svg" style="opacity: 0.0;">
@@ -74,7 +74,7 @@
                   <img src="assets/images/bliss_labs_logo.svg" width="240px">
                 </div>
                 <h3 class="mt-5">We Are A Global Fiscal Host</h3>
-                <h5>We act as a hub for global inclusiveness in all aspects of development. Giving those that need, access to infrastructure support, and fiscal growth opportunities, </h5>
+                <h5>We act as a hub for global inclusiveness in all aspects of development. Giving those that need, access to infrastructure support, and fiscal growth opportunities</h5>
               </div>
             </div>
             <div class="carousel-item"> <img class="cover d-block img-fluid w-100 h-75" src="https://static.pingendo.com/cover-bubble-light.svg" style="	opacity: 0.0;">
@@ -92,7 +92,7 @@
                   <img src="assets/images/bliss_labs_logo.svg" width="240px">
                 </div>
                 <h3 class="mt-5">We Help Build Communities</h3>
-                <h5>with indicators</h5>
+                <h5>We help our projects build lasting communities that will continue to grow and thrive in the future</h5>
               </div>
             </div>
             <div class="carousel-item"> <img class="cover d-block img-fluid w-100 h-75" src="https://static.pingendo.com/cover-bubble-light.svg" style="opacity: 0.0;">
@@ -101,7 +101,7 @@
                   <img src="assets/images/bliss_labs_logo.svg" width="240px">
                 </div>
                 <h3 class="mt-5">We Are Innovating The Future</h3>
-                <h5>with indicators</h5>
+                <h5>We help stimulate innovation by pairing projects with community needs, and helping their vision be realized</h5>
               </div>
             </div>
           </div>
@@ -113,7 +113,7 @@
     <div class="container">
       <div class="row">
         <div class="text-center col-md-12">
-          <h1 class="text-light">Featured Projects</h1>
+          <h1 class="display-3 text-light">Featured Projects</h1>
         </div>
       </div>
       <div class="row">
@@ -195,87 +195,93 @@
       </div>
     </div>
   </div>
-  <div id="projects" class="py-4 filter-ldark cover full-width bg-fixed text-light w-100 h-75" style="background-image: url(&quot;https://i.imgur.com/352qhqA.png&quot;); background-position: left top; background-size: cover;">
+  <div class="pt-5 bg-secondary" id="projects" style="background-image: url(&quot;https://i.imgur.com/352qhqA.png&quot;); background-position: left top; background-size: cover;" >
     <div class="container">
-      <div class="row">
-        <div class="mx-auto col-md-8">
-          <!-- <h1 class="mb-3">BlissLabs Projects</h1> -->
-          <h3 class="display-3 text-center" style=""><b>BlissLabs Projects</b></h3>
-          <p class="lead">We help start, maintain and support various community and open-source projects with over a million combined downloads per year. Explore more about our projects below </p>
+      <div class="row text-center align-items-center justify-content-center" style="display: block;">
+        <div class=" text-center pb-4">
+          <h1 class="display-3 mb-4 text-white">BlissLabs Projects</h1>
+          <h3>We help start, maintain and support various community and open-source projects with over a million combined downloads per year. Explore more about our projects below </h3>
+          <div class="tab-content mt-2">
+            <div class="tab-pane fade show active" id="tabone" role="tabpanel">
+              <section id="team_content2" class="team_content2"></section>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+              <ul id="content" class="project-content cards text-dark"></ul>
+              <!---------------->
+              <script>
+                $.ajax({
+                  type: "GET",
+                  url: "https://api.blissroms.org/api/allprojects",
+                  contentType: "application/json",
+                  datatype: "json",
+                  data: {},
+                  success: function(data) {
+                    var colorsArray = ['rgba(100, 100, 100, 0.7)', 'rgba(48, 48, 48, 0.7)', 'rgba(0, 168, 236, 0.7)', 'rgba(0, 128, 255, 0.7)', 'rgba(0, 96, 170, 0.7)', 'rgba(137, 124, 178, 0.7)', 'rgba(0, 33, 46, 0.7)'];
+                    var uniqueColorIndex = 0;
+                    var newContent = ''; // Variable to hold HTML
+                    for (var i = 0; i < data.length; i++) { // Loop through object
+                      min = 1
+                      max = colorsArray.length - 1
+                      uniqueColorIndex = Math.floor(min + Math.random() * (max + 1 - min));
+                      if (colorsArray[uniqueColorIndex] == 'undefined') {
+                        uniqueColorIndex = colorsArray.length - 1
+                      }
+                      if (data[i].project != null) {
+                        newContent += '<li class="cards__item">';
+                        newContent += '<div class="card blur badge-dark">';
+                        newContent += '<div class="card__image" style="background-color: ' + colorsArray[uniqueColorIndex] + ';">';
+                        newContent += '<img class="img-fluid d-block mb-3 mt-3 mx-auto" src="' + data[i].project_avatar + '" style="max-width: auto; height: 150px;" ';
+                        newContent += 'alt="' + data[i].project + ' " style="padding-top: 1.5rem;"/>';
+                        newContent += '</div>';
+                        newContent += '<div class="card__content">';
+                        newContent += '<div class="card__title" style="padding-top: 1.7rem; padding-left: 1rem; padding-right: 1rem;"></div?';
+                        newContent += '<h3><b style="font-size: xx-large;">' + data[i].project + '</b></h3>';
+                        newContent += '<p class="card__text">' + data[i].project_description + '</p>';
+                        newContent += '<h6>Project Lead: ' + data[i].project_lead + '</h6>';
+                        if (data[i].project_github != null) {
+                          newContent += '<a href="' + data[i].project_github + '" target="_blank"><i class="fab fa fa-git p-2" style="font-size: 300%;"></i></a>';
+                        }
+                        if (data[i].project_website != null) {
+                          newContent += '<a href="' + data[i].project_website + '" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a>';
+                        }
+                        newContent += '</div>';
+                        newContent += '</div>';
+                        newContent += '</li>';
+                      } else {
+                        newContent = '<div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/BlissIcon.png" width="150"><h2>Bliss OS</h2><a href="https://github.com/BlissRoms-x86" target="_blank"><i class="fa fa fa-github p-2" style="font-size: 300%;"></i></a><a href="https://blissos.org" target="_blank"><i class="fa fa p-2 fa-globe" style="font-size: 300%;"></i></a><p class="mb-0">Bliss OS brings all the features and options of Bliss ROM to your PC, tablet, chromebook and mackbook. and is available in many different configurations.</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="https://avatars0.githubusercontent.com/u/65220149?s=200&amp;v=4" width="150"><h1>Boringdroid</h1><a href="https://github.com/boringdroid" target="_blank"><i class="fa fa-github p-2" style="font-size: 300%;"></i></a><p class="mb-0">Boringdroid is a boring project to provide patch set to run multi-window on low version AOSP.</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="https://i.imgur.com/bTd1SMo.png" width="150"><h1>Android-Generic Project</h1><a href="https://gitlab.com/android-generic/vendor_android-generic" target="_blank"><i class="fa fa-git p-2" style="font-size: 300%;"></i></a><p class="mb-0">Bringing Android ROMs to PCs and GSI devices everywhere. Simple to start, easy to use. Go get your ROM on!</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/SG_Asset_2.png" width="138"><h1>Supreme Gamers</h1><a href="https://supreme-gamers.com/" target="_blank"><i class="fa fa-google p-2" style="font-size: 300%;"></i></a><a href="https://gitlab.com/AXIM0S/vendor-gearlock" target="_blank"><i class="fa fa-git p-2" style="font-size: 300%;"></i></a><p class="mb-0">Android-x86 Gaming Community and creators of Gearlock Recovery for Android-x86 based projects</p></div></div>';
+                      }
+                    }
+                    // Update the page with the new content
+                    document.getElementById('content').innerHTML = newContent;
+                  },
+                  error: function(jqXHR, status, err) {
+                    newContent = '<div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/BlissIcon.png" width="150"><h2>Bliss OS</h2><a href="https://github.com/BlissRoms-x86" target="_blank"><i class="fa fa fa-github p-2" style="font-size: 300%;"></i></a><a href="https://blissos.org" target="_blank"><i class="fa fa p-2 fa-globe" style="font-size: 300%;"></i></a><p class="mb-0">Bliss OS brings all the features and options of Bliss ROM to your PC, tablet, chromebook and mackbook. and is available in many different configurations.</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="https://avatars0.githubusercontent.com/u/65220149?s=200&amp;v=4" width="150"><h1>Boringdroid</h1><a href="https://github.com/boringdroid" target="_blank"><i class="fa fa-github p-2" style="font-size: 300%;"></i></a><p class="mb-0">Boringdroid is a boring project to provide patch set to run multi-window on low version AOSP.</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="https://i.imgur.com/bTd1SMo.png" width="150"><h1>Android-Generic Project</h1><a href="https://gitlab.com/android-generic/vendor_android-generic" target="_blank"><i class="fa fa-git p-2" style="font-size: 300%;"></i></a><p class="mb-0">Bringing Android ROMs to PCs and GSI devices everywhere. Simple to start, easy to use. Go get your ROM on!</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/SG_Asset_2.png" width="138"><h1>Supreme Gamers</h1><a href="https://supreme-gamers.com/" target="_blank"><i class="fa fa-google p-2" style="font-size: 300%;"></i></a><a href="https://gitlab.com/AXIM0S/vendor-gearlock" target="_blank"><i class="fa fa-git p-2" style="font-size: 300%;"></i></a><p class="mb-0">Android-x86 Gaming Community and creators of Gearlock Recovery for Android-x86 based projects</p></div></div>';
+                    document.getElementById('content').innerHTML = newContent;
+                    alert("Status: " + textStatus);
+                    alert("Error: " + errorThrown);
+                  }
+                })
+              </script>
+              <!---------------->
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="container">
-        <ul id="content" class="project-content cards text-dark"></ul>
-        <!---------------->
-        <script>
-          $.ajax({
-            type: "GET",
-            url: "https://api.blissroms.org/api/allprojects",
-            contentType: "application/json",
-            datatype: "json",
-            data: {},
-            success: function(data) {
-              var colorsArray = ['rgba(100, 100, 100, 0.7)', 'rgba(48, 48, 48, 0.7)', 'rgba(0, 168, 236, 0.7)', 'rgba(0, 128, 255, 0.7)', 'rgba(0, 96, 170, 0.7)', 'rgba(137, 124, 178, 0.7)', 'rgba(0, 33, 46, 0.7)'];
-              var uniqueColorIndex = 0;
-              var newContent = ''; // Variable to hold HTML
-              for (var i = 0; i < data.length; i++) { // Loop through object
-                min = 1
-                max = colorsArray.length - 1
-                uniqueColorIndex = Math.floor(min + Math.random() * (max + 1 - min));
-                if (colorsArray[uniqueColorIndex] == 'undefined') {
-                  uniqueColorIndex = colorsArray.length - 1
-                }
-                if (data[i].project != null) {
-                  newContent += '<li class="cards__item">';
-                  newContent += '<div class="card blur badge-dark">';
-                  newContent += '<div class="card__image" style="background-color: ' + colorsArray[uniqueColorIndex] + ';">';
-                  newContent += '<img class="img-fluid d-block mb-3 mt-3 mx-auto" src="' + data[i].project_avatar + '" style="max-width: auto; height: 150px;" ';
-                  newContent += 'alt="' + data[i].project + ' " style="padding-top: 1.5rem;"/>';
-                  newContent += '</div>';
-                  newContent += '<div class="card__content">';
-                  newContent += '<div class="card__title" style="padding-top: 1.7rem; padding-left: 1rem; padding-right: 1rem;"></div?';
-                  newContent += '<h3><b style="font-size: xx-large;">' + data[i].project + '</b></h3>';
-                  newContent += '<p class="card__text">' + data[i].project_description + '</p>';
-                  newContent += '<h6>Project Lead: ' + data[i].project_lead + '</h6>';
-                  if (data[i].project_github != null) {
-                    newContent += '<a href="' + data[i].project_github + '" target="_blank"><i class="fab fa fa-git p-2" style="font-size: 300%;"></i></a>';
-                  }
-                  if (data[i].project_website != null) {
-                    newContent += '<a href="' + data[i].project_website + '" target="_blank"><i class="fab fa p-2 fa-globe" style="font-size: 300%;"></i></a>';
-                  }
-                  newContent += '</div>';
-                  newContent += '</div>';
-                  newContent += '</li>';
-                } else {
-                  newContent = '<div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/BlissIcon.png" width="150"><h2>Bliss OS</h2><a href="https://github.com/BlissRoms-x86" target="_blank"><i class="fa fa fa-github p-2" style="font-size: 300%;"></i></a><a href="https://blissos.org" target="_blank"><i class="fa fa p-2 fa-globe" style="font-size: 300%;"></i></a><p class="mb-0">Bliss OS brings all the features and options of Bliss ROM to your PC, tablet, chromebook and mackbook. and is available in many different configurations.</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="https://avatars0.githubusercontent.com/u/65220149?s=200&amp;v=4" width="150"><h1>Boringdroid</h1><a href="https://github.com/boringdroid" target="_blank"><i class="fa fa-github p-2" style="font-size: 300%;"></i></a><p class="mb-0">Boringdroid is a boring project to provide patch set to run multi-window on low version AOSP.</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="https://i.imgur.com/bTd1SMo.png" width="150"><h1>Android-Generic Project</h1><a href="https://gitlab.com/android-generic/vendor_android-generic" target="_blank"><i class="fa fa-git p-2" style="font-size: 300%;"></i></a><p class="mb-0">Bringing Android ROMs to PCs and GSI devices everywhere. Simple to start, easy to use. Go get your ROM on!</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/SG_Asset_2.png" width="138"><h1>Supreme Gamers</h1><a href="https://supreme-gamers.com/" target="_blank"><i class="fa fa-google p-2" style="font-size: 300%;"></i></a><a href="https://gitlab.com/AXIM0S/vendor-gearlock" target="_blank"><i class="fa fa-git p-2" style="font-size: 300%;"></i></a><p class="mb-0">Android-x86 Gaming Community and creators of Gearlock Recovery for Android-x86 based projects</p></div></div>';
-                }
-              }
-              // Update the page with the new content
-              document.getElementById('content').innerHTML = newContent;
-            },
-            error: function(jqXHR, status, err) {
-              newContent = '<div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/BlissIcon.png" width="150"><h2>Bliss OS</h2><a href="https://github.com/BlissRoms-x86" target="_blank"><i class="fa fa fa-github p-2" style="font-size: 300%;"></i></a><a href="https://blissos.org" target="_blank"><i class="fa fa p-2 fa-globe" style="font-size: 300%;"></i></a><p class="mb-0">Bliss OS brings all the features and options of Bliss ROM to your PC, tablet, chromebook and mackbook. and is available in many different configurations.</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="https://avatars0.githubusercontent.com/u/65220149?s=200&amp;v=4" width="150"><h1>Boringdroid</h1><a href="https://github.com/boringdroid" target="_blank"><i class="fa fa-github p-2" style="font-size: 300%;"></i></a><p class="mb-0">Boringdroid is a boring project to provide patch set to run multi-window on low version AOSP.</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="https://i.imgur.com/bTd1SMo.png" width="150"><h1>Android-Generic Project</h1><a href="https://gitlab.com/android-generic/vendor_android-generic" target="_blank"><i class="fa fa-git p-2" style="font-size: 300%;"></i></a><p class="mb-0">Bringing Android ROMs to PCs and GSI devices everywhere. Simple to start, easy to use. Go get your ROM on!</p></div></div><div class="blur badge-dark"><div class="card-body p-4"> <img class="img-fluid d-block mb-3 mx-auto" src="assets/images/SG_Asset_2.png" width="138"><h1>Supreme Gamers</h1><a href="https://supreme-gamers.com/" target="_blank"><i class="fa fa-google p-2" style="font-size: 300%;"></i></a><a href="https://gitlab.com/AXIM0S/vendor-gearlock" target="_blank"><i class="fa fa-git p-2" style="font-size: 300%;"></i></a><p class="mb-0">Android-x86 Gaming Community and creators of Gearlock Recovery for Android-x86 based projects</p></div></div>';
-              document.getElementById('content').innerHTML = newContent;
-              alert("Status: " + textStatus);
-              alert("Error: " + errorThrown);
-            }
-          })
-        </script>
-        <!---------------->
       </div>
     </div>
   </div>
+  <!-- <div id="projects" class="py-4 filter-ldark cover full-width bg-fixed text-light w-100 h-75" style="background-image: url(&quot;https://i.imgur.com/352qhqA.png&quot;); background-position: left top; background-size: cover;">
+    
+  </div> -->
   <div class="py-5  bg-secondary" id="about">
     <div class="container">
       <div class="row">
         <div class="text-center col-md-12">
           <!-- <h1>About Us</h1> -->
-          <h3 class="display-3 text-center" style=""><b>About Us</b></h3>
+          <h3 class="display-3 text-center" style="">About Us</h3>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12" style=""><br><br>
-          <h2 style="color: #fff;" class="text-center"><b>Our Mission Statement</b></h2>
+          <h2 style="color: #fff;" class="text-center">Our Mission Statement</h2>
           <p class="highlight_secondary lead text-center">Blisslabs is a non profit organization that has a goal to help create and maintain various open source operating systems and other software that helps to extend the life of devices in order to help futher community innovation and help with the world's e-waste problems. <br><br> To do this, we work to create projects, mentor and teach future open source developer's in all aspects of development, design, and animation and form alliances with other projects that share in our visions. We also develop tools to help minimize the complex development process and aid in learning. <br><br> And we act as a global fiscal host for open source projects, allowing for a much larger opportunity to work with others globally and increase user base.<br></p>
         </div>
       </div>
@@ -286,7 +292,7 @@
       <div class="row">
         <div class="text-center col-md-12">
           <!-- <h1>Outreach</h1> -->
-          <h3 class="display-3 text-center" style=""><b>Outreach</b></h3>
+          <h3 class="display-3 text-center" style="">Outreach</h3>
         </div>
       </div>
       <div class="row">
@@ -2358,7 +2364,7 @@
   <div class="py-5 bg-dark" id="transparency">
     <div class="container text-center">
       <!-- <h1 class="text-primary display-4" style="color: #fff;">Transparency</h1> -->
-      <h3 class="display-3 text-center" style="color: #fff;"><b>Transparency</b></h3>
+      <h3 class="display-3 text-center" style="color: #fff;">Transparency</h3>
       <p class="text-center lead" style="margin: 5%">We believe in full transparency, but we do not believe this transparency should come at a cost to our supporters. This is why we submit a yearly 990 form to the US IRS. If you are interested in looking into that or any other information we submit, feel free to visit our <a style="font-weight: bold !important; color: #0080ff;" target="blank" href="https://www.guidestar.org/profile/82-3580195">Guidestar.org</a> page.</p>
       <div class="row">
         <div class="col-md-6"><a href="https://www.guidestar.org/profile/82-3580195" target="_blank"><img src="https://widgets.guidestar.org/gximage2?o=9676451&amp;l=v4"></a></div>
@@ -2373,7 +2379,7 @@
     <div class="container">
       <div class="row">
         <div class="px-md-5 col-md-8 pb-4">
-          <h1 class="mb-4 text-white">We volunteer our time.</h1>
+          <h1 class="display-3 mb-4 text-white">We volunteer our time.</h1>
           <h3>We are a 501(c3) nonprofit,&nbsp;</h3>
           <p class="mb-3">We're run by people that donate their free time towards the project. We do our best to bring a quality OS to your device, while working a real job on the side in most cases. Please consider showing us we're on the right track by clicking the button below.</p> <a href="https://opencollective.com/blisslabs/donate" class="btn btn-primary">Buy Us a Coffee</a>
         </div>
@@ -2385,7 +2391,7 @@
     <div class="container">
       <div class="row text-center align-items-center justify-content-center" style="display: block;">
         <div class=" text-center pb-4">
-          <h1 class="mb-4 text-white">BlissLabs Volunteers &amp; Team-Leads</h1>
+          <h1 class="display-3 mb-4 text-white">BlissLabs Volunteers &amp; Team-Leads</h1>
           <h3>Here are all the people that help run things</h3>
           <!-- <p class="mb-3">We're run by people that donate their free time towards the project. We do our best to bring a quality OS to your device, while working a real job on the side in most cases. Please consider showing us we're on the right track by clicking the button below.</p> <a href="https://opencollective.com/blisslabs/donate" class="btn btn-primary">Buy Us a Coffee</a> -->
           <div class="tab-content mt-2">
@@ -2424,7 +2430,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 text-left">
-          <h3 class="text-primary display-3"> <b>Join Our Team</b></h3>
+          <h3 class="text-primary display-3">Join Our Team</h3>
           <h2 class="">We are accepting applications now</h2>
           <p class="text-warning">* only volunteer positions currently available. Internships coming soon *</p>
           <p class="mb-3">We are accepting people in small manageable groups while we grow, and we tend to lean towards the type of people that want to learn and grow with BlissLabs. We provide the tools, knowledge and the mentorship needed to help bring your development dreams to reality, and all we ask in return is a minimum contribution towards one of our projects while you learn and grow in your strengths. If you're an individual and would like to apply to join our team, please use the button below </p>
@@ -2508,7 +2514,6 @@
   <script src="js/smooth-scroll.js"></script>
   <script src="js/script.js"></script>
   <script src="js/counter.js"></script>
-  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
 </body>
 
 </html>
