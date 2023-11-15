@@ -359,9 +359,15 @@ img{
     width: 10%;
   }
 }
+.lt-blur {
+	backdrop-filter: drop-shadow(8px 8px 16px rgb(8, 8, 8));
+	backdrop-filter: blur(5px);
+	background: rgba(0,0,0,0.4);
+	backdrop-filter: saturate(120%) blur(10px);
+}
 .blur {
 	backdrop-filter: blur(5px);
-	background: rgba(0,0,0,0.8);
+	background: rgba(0,0,0,0.6);
 	backdrop-filter: saturate(180%) blur(10px);
 }
 .bright-blur {
