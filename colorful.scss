@@ -373,3 +373,9 @@ button:hover {
   cursor: pointer;
   outline: none;
 }
+
+.fheight {
+  height: 90vh;
+  max-width: 100%;
+  object-fit: cover;
+}
