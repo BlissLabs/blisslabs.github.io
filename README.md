@@ -1,2 +1,1 @@
-# boringdroid.github.io
-[WIP]The boringdorid project's site.
+# Source for https://blisslabs.github.io aka https://blisslabs.org
