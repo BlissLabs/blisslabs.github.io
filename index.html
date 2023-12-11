@@ -833,144 +833,160 @@
       </div>
     </div>
   </div>
-  <div class="pt-5 bg-primary" id="volunteer">
-    <div class="container">
-      <div class="row">
-        <div class="px-md-5 col-md-8 pb-4">
-          <h1 class="display-4 mb-4 text-white">We volunteer our time.</h1>
-          <h3>We are a 501(c3) nonprofit,&nbsp;</h3>
-          <p class="mb-3">We're run by people that donate their free time towards the project. We do our best to bring a quality OS to your device, while working a real job on the side in most cases. Please consider showing us we're on the right track by clicking the button below.</p> <a href="https://opencollective.com/blisslabs/donate" class="btn btn-primary">Buy Us a Coffee</a>
+  <section id="funding">
+    <div class="container my-0 pt-5 text-center">
+      <h3 class="display-4 text-light">Funding</h3>
+      <p class="mx-auto pb-5 text-light">With the help of our users and fans, we've been able to grow from individual, passionate volunteers into a small but sustainable team. Every little bit of support helps us improve our projects and tackle even more ambitious goals.</p>
+    </div>
+    <div class="container card bg-light mx-auto mb-5 d-flex flex-column justify-content-center align-items-center flex-grow-1 pb-4" style="margin-top: -2rem !important; padding-top: 2rem !important;">
+      <h5 class="card-title">
+        <img src="https://opencollective.com/static/images/opencollective-icon.svg" class="fab display-4" width="85.25rem">
+      </h5>
+      <p class="card-text">BlissLabs is also on OpenCollective, and you can contribute to our collective through the link below.</p>
+      <a href="https://opencollective.com/blisslabs/donate" target="_blank">
+        <img src="https://opencollective.com/webpack/donate/button@2x.png?color=blue" width="300rem" class="pb-3">
+      </a>
+      <script height="auto" width="100%" position="justify-center" src="https://opencollective.com/blisslabs/banner.js?style={&quot;div&quot;:{&quot;a&quot;:{&quot;color&quot;:&quot;#ffffff&quot;},&quot;h2&quot;:{&quot;fontFamily&quot;:&quot;Verdana&quot;,&quot;fontWeight&quot;:&quot;bold&quot;,&quot;fontSize&quot;:&quot;54px&quot;,&quot;color&quot;:&quot;#ffffff&quot;}}"></script>
+    </div>
+    <div class="pt-5 bg-primary" id="volunteer">
+      <div class="container">
+        <div class="row">
+          <div class="px-md-5 col-md-8 pb-4">
+            <h1 class="display-4 mb-4 text-white">We volunteer our time.</h1>
+            <h3>We are a 501(c3) nonprofit,&nbsp;</h3>
+            <p class="mb-3">We're run by people that donate their free time towards the project. We do our best to bring a quality OS to your device, while working a real job on the side in most cases. Please consider showing us we're on the right track by clicking the button below.</p> <a href="https://opencollective.com/blisslabs/donate" class="btn btn-primary">Buy Us a Coffee</a>
+          </div>
+          <div class="col-md-4 pb-4"> <img class="img-fluid d-block" src="assets/images/coffee-break.svg"> </div>
         </div>
-        <div class="col-md-4 pb-4"> <img class="img-fluid d-block" src="assets/images/coffee-break.svg"> </div>
       </div>
     </div>
-  </div>
-  <div class="pt-5 bg-secondary" id="our_team">
-    <div class="container">
-      <div class="row text-center align-items-center justify-content-center" style="display: block;">
-        <div class=" text-center pb-4">
-          <h1 class="display-4 mb-4 text-white">BlissLabs Volunteers &amp; Team-Leads</h1>
-          <h3>Here are all the people that help run things</h3>
-          <!-- <p class="mb-3">We're run by people that donate their free time towards the project. We do our best to bring a quality OS to your device, while working a real job on the side in most cases. Please consider showing us we're on the right track by clicking the button below.</p> <a href="https://opencollective.com/blisslabs/donate" class="btn btn-primary">Buy Us a Coffee</a> -->
-          <div class="tab-content mt-2">
-            <div class="tab-pane fade show active" id="tabone" role="tabpanel">
-              <section id="team_content" class="team_content"></section>
-              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-              <script>
-                $.ajax({
-                  type: "GET",
-                  url: "https://api.blissroms.org/api/teambliss", // TeamBliss JSON
-                  success: function(data) {
-                    var teamContent = ''; // Variable to hold HTML
-                    for (var i = 0; i < data.length; i++) { // Loop through object
-                      <!-- if ($.inArray(data[i].member, ['Jon West', 'utzcoz', 'Jackeagle', 'hmtheboy154']) >= 0) { -->
-                      teamContent += '<div id="event" class="team_item">';
-                      teamContent += '<img class="image crop" src="' + data[i].avatar + '" ';
-                      teamContent += 'alt="' + data[i].member + '" />';
-                      teamContent += '<h3>' + data[i].member + '</h3>';
-                      teamContent += '<p class="team_data_text font-weight-bold">' + data[i].designation + '</p>';
-                      // teamContent += '<p class="team_data_text font-weight-bold"><i>&quot;' + data[i].email + '&quot;</i></p>';
-                      teamContent += '</div>';
+    <div class="pt-5 bg-secondary" id="our_team">
+      <div class="container">
+        <div class="row text-center align-items-center justify-content-center" style="display: block;">
+          <div class=" text-center pb-4">
+            <h1 class="display-4 mb-4 text-white">BlissLabs Volunteers &amp; Team-Leads</h1>
+            <h3>Here are all the people that help run things</h3>
+            <!-- <p class="mb-3">We're run by people that donate their free time towards the project. We do our best to bring a quality OS to your device, while working a real job on the side in most cases. Please consider showing us we're on the right track by clicking the button below.</p> <a href="https://opencollective.com/blisslabs/donate" class="btn btn-primary">Buy Us a Coffee</a> -->
+            <div class="tab-content mt-2">
+              <div class="tab-pane fade show active" id="tabone" role="tabpanel">
+                <section id="team_content" class="team_content"></section>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script>
+                  $.ajax({
+                    type: "GET",
+                    url: "https://api.blissroms.org/api/teambliss", // TeamBliss JSON
+                    success: function(data) {
+                      var teamContent = ''; // Variable to hold HTML
+                      for (var i = 0; i < data.length; i++) { // Loop through object
+                        <!-- if ($.inArray(data[i].member, ['Jon West', 'utzcoz', 'Jackeagle', 'hmtheboy154']) >= 0) { -->
+                        teamContent += '<div id="event" class="team_item">';
+                        teamContent += '<img class="image crop" src="' + data[i].avatar + '" ';
+                        teamContent += 'alt="' + data[i].member + '" />';
+                        teamContent += '<h3>' + data[i].member + '</h3>';
+                        teamContent += '<p class="team_data_text font-weight-bold">' + data[i].designation + '</p>';
+                        // teamContent += '<p class="team_data_text font-weight-bold"><i>&quot;' + data[i].email + '&quot;</i></p>';
+                        teamContent += '</div>';
+                      }
+                      // Update the page with the new content
+                      document.getElementById('team_content').innerHTML = teamContent;
                     }
-                    // Update the page with the new content
-                    document.getElementById('team_content').innerHTML = teamContent;
-                  }
-                })
-              </script>
+                  })
+                </script>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="py-4 bg-dark " id="join" style="	background-image: url(assets/images/Bliss_view_bg_1.png);	background-position: right bottom;	background-size: cover;	background-repeat: repeat;	background-attachment: fixed;">
-    <div class="container card-body lt-blur shadow">
-      <div class="row ">
-        <div class="col-md-8 text-left ">
-          <h3 class="text-primary display-4">Join Our Team</h3>
-          <h2 class="">We are accepting applications now</h2>
-          <p class="text-warning">* only volunteer positions currently available. Internships coming soon *</p>
-          <p class="mb-3">We are accepting people in small manageable groups while we grow, and we tend to lean towards the type of people that want to learn and grow with BlissLabs. We provide the tools, knowledge and the mentorship needed to help bring your development dreams to reality, and all we ask in return is a minimum contribution towards one of our projects while you learn and grow in your strengths. If you're an individual and would like to apply to join our team, please use the button below </p>
-          <a href="https://goo.gl/forms/PdiaAj1PojosmehK2" class="btn btn-primary mb-3">Join Our Team</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="py-4 text-center text-md-right" style="	background-image: url(assets/images/Bliss_view_bg_1.png);	background-position: right bottom;	background-size: cover;	background-repeat: repeat;	background-attachment: fixed;">
-    <div class="container card-body lt-blur">
-      <div class="row">
-        <div class="mx-auto mx-md-0 ml-md-auto col-10 col-md-9">
-          <h3 class="text-primary display-4">Submit Your Project</h3>
-          <p class="mb-3 text-white">Got a great open-source project, but having trouble getting things off the ground? Or maybe you are looking to gain a few more people to help you out on it. Whatever your situation is, you can submit your project below to start the review process and join under BlissLabs.</p>
-          <form class="form-inline d-flex justify-content-end">
-            <div class="input-group"> <a class="mb-3 btn btn-primary text-center d-flex justify-content-center" href="https://goo.gl/kAb7ti" role="button" style="color: rgb(255, 255, 255);">Submit your project now</a>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <footer id="contacts">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-12">
-              <h1 class="text-center">Follow Us For Updates</h1>
-            </div>
-          </div>
-          <h3 class="text-center mb-5 pb-3">We <i class="fa fa-fw fa-heart d-inline text-danger"></i> new friends</h3>
-          <div class="col-12 col-md-12 text-center pt-3 mt-3">
-            <ul class="soc-icons">
-              <li>
-                <a href="https://www.facebook.com/BlissROMs" class="text-muted" target="_blank">
-                  <i class="fab fa fa-fw fa-facebook"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/blissroms" class="text-muted" target="_blank">
-                  <i class="fab fa fa-fw fa-instagram"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/stayblissful" class="text-muted" target="_blank">
-                  <i class="fab fa fa-fw fa-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.reddit.com/r/BlissRoms" class="text-muted" target="_blank">
-                  <i class="fab fa fa-fw fa-reddit"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/company/stayblissful" class="text-muted" target="_blank">
-                  <i class="fab fa fa-fw fa-linkedin"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://t.me/Team_Bliss_Community" class="text-muted" target="_blank">
-                  <i class="fab fa fa-fw fa-send"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://discord.gg/wwc4Aua4fp" class="text-muted" target="_blank">
-                  <i class="fab fa fa-fw fa-users"></i>
-                </a>
-              </li>
-            </ul>
+    <div class="py-4 bg-dark " id="join" style="	background-image: url(assets/images/Bliss_view_bg_1.png);	background-position: right bottom;	background-size: cover;	background-repeat: repeat;	background-attachment: fixed;">
+      <div class="container card-body lt-blur shadow">
+        <div class="row ">
+          <div class="col-md-8 text-left ">
+            <h3 class="text-primary display-4">Join Our Team</h3>
+            <h2 class="">We are accepting applications now</h2>
+            <p class="text-warning">* only volunteer positions currently available. Internships coming soon *</p>
+            <p class="mb-3">We are accepting people in small manageable groups while we grow, and we tend to lean towards the type of people that want to learn and grow with BlissLabs. We provide the tools, knowledge and the mentorship needed to help bring your development dreams to reality, and all we ask in return is a minimum contribution towards one of our projects while you learn and grow in your strengths. If you're an individual and would like to apply to join our team, please use the button below </p>
+            <a href="https://goo.gl/forms/PdiaAj1PojosmehK2" class="btn btn-primary mb-3">Join Our Team</a>
           </div>
         </div>
       </div>
     </div>
-  </footer>
-  <!-- FOOTER  -->
-  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous" style=""></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"></script>
-  <!-- Script: Smooth scrolling between anchors in the same page -->
-  <script src="js/smooth-scroll.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/counter.js"></script>
+    <div class="py-4 text-center text-md-right" style="	background-image: url(assets/images/Bliss_view_bg_1.png);	background-position: right bottom;	background-size: cover;	background-repeat: repeat;	background-attachment: fixed;">
+      <div class="container card-body lt-blur">
+        <div class="row">
+          <div class="mx-auto mx-md-0 ml-md-auto col-10 col-md-9">
+            <h3 class="text-primary display-4">Submit Your Project</h3>
+            <p class="mb-3 text-white">Got a great open-source project, but having trouble getting things off the ground? Or maybe you are looking to gain a few more people to help you out on it. Whatever your situation is, you can submit your project below to start the review process and join under BlissLabs.</p>
+            <form class="form-inline d-flex justify-content-end">
+              <div class="input-group"> <a class="mb-3 btn btn-primary text-center d-flex justify-content-center" href="https://goo.gl/kAb7ti" role="button" style="color: rgb(255, 255, 255);">Submit your project now</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="contacts">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="text-center">Follow Us For Updates</h1>
+              </div>
+            </div>
+            <h3 class="text-center mb-5 pb-3">We <i class="fa fa-fw fa-heart d-inline text-danger"></i> new friends</h3>
+            <div class="col-12 col-md-12 text-center pt-3 mt-3">
+              <ul class="soc-icons">
+                <li>
+                  <a href="https://www.facebook.com/BlissROMs" class="text-muted" target="_blank">
+                    <i class="fab fa fa-fw fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/blissroms" class="text-muted" target="_blank">
+                    <i class="fab fa fa-fw fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/stayblissful" class="text-muted" target="_blank">
+                    <i class="fab fa fa-fw fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.reddit.com/r/BlissRoms" class="text-muted" target="_blank">
+                    <i class="fab fa fa-fw fa-reddit"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/company/stayblissful" class="text-muted" target="_blank">
+                    <i class="fab fa fa-fw fa-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://t.me/Team_Bliss_Community" class="text-muted" target="_blank">
+                    <i class="fab fa fa-fw fa-send"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://discord.gg/wwc4Aua4fp" class="text-muted" target="_blank">
+                    <i class="fab fa fa-fw fa-users"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER  -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous" style=""></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"></script>
+    <!-- Script: Smooth scrolling between anchors in the same page -->
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/counter.js"></script>
+  </section>
 </body>
 
 </html>

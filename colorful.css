@@ -6949,3 +6949,7 @@ button:hover {
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover; }
+
+.sponser-card {
+  height: 18rem;
+}
