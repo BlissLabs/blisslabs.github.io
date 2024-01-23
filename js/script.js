@@ -6,11 +6,6 @@ var scrollToElement = function(el, ms){
 }
 
 $(document).ready(function() {
-  $('.nav-link').on('click', function(e) {
-    e.preventDefault();
-    var el = $(this).attr('href');
-    scrollToElement(el);
-  });
   
   $(window).scroll(function() {
     var x = $(window).scrollTop();
