@@ -469,5 +469,269 @@ ul.soc-icons li a:hover {
   text-shadow: 0 0 5px #007bff;
 }
 
+/* ------------Testimonial-Slider-Css-Start------------- */
+/* testimonials wraper  */
+#testimonial_slider {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.testimonial_section .testimonial_block {
+  /* background-color: #040F14; */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-top: 65px;
+}
+
+.testimonial_section .testimonial_block .testimonial_slide_box {
+  text-align: center;
+  width: 430px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+/* testimonials rating  */
+.testimonial_section .testimonial_block .rating span {
+  color: #FC9400;
+  font-size: 18px;
+}
+
+.testimonial_section .testimonial_block .testimonial_slide_box .review {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+/* testimonials image  */
+.testimonial_section .testimonial_block .testimonial_slide_box .testimonial_img img {
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+/* testimonials heading h3 */
+.testimonial_section .testimonial_block .testimonial_slide_box h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.testimonial_section .testimonial_block .testimonial_slide_box .designation {
+  font-size: 15px;
+}
+
+/* testimonials total review */
+.testimonial_section .total_review {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.testimonial_section .total_review .rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* testimonials paragraph */
+.testimonial_section .total_review .rating p {
+  margin-bottom: 0;
+  font-weight: 600;
+  margin-left: 5px;
+  color: var(--dark-purple);
+}
+
+/* testimonials heading */
+.testimonial_section .total_review h3 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--dark-purple);
+}
+
+.testimonial_section .total_review a {
+  color: var(--purple);
+  font-weight: 700;
+}
+
+.testimonial_section .testimonial_block .avtar_faces {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  width: 100%;
+}
+
+.testimonial_section .testimonial_block .avtar_faces img {
+  max-width: 100%;
+}
 
 
+/* slider controls */
+.owl-carousel .owl-dots {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+.owl-carousel .owl-dots button {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: var(--slider-dots-color);
+  border-radius: 15px;
+  margin: 0 5px;
+  margin-bottom: 40px;
+}
+
+.owl-carousel .owl-dots button.active {
+  background-color: #19A7CE;
+}
+
+.owl-carousel .owl-item img {
+  max-width: 100%;
+  width: auto !important;
+}
+
+.row_am {
+  padding: 50px 0;
+}
+
+
+.about_trust_section {
+  margin-bottom: 40px;
+}
+
+
+/* Blog List Css Start */
+.blog_list_story {
+  margin-bottom: 50px;
+}
+
+.blog_list_main {
+  position: relative;
+}
+
+.blog_list_main > .container > .row {
+  align-items: center;
+}
+
+.blog_list_main .blog_img {
+  position: relative;
+}
+
+.blog_list_main .blog_img img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.blog_list_main .blog_img span {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  font-size: 14px;
+  color: var(--text-white);
+}
+
+.blog_list_main .blog_text .section_title {
+  text-align: left;
+}
+
+.blog_list_main .blog_text .choice_badge {
+  font-size: 12px;
+  background-color: #F8D979;
+  display: inline-block;
+  padding: 1px 10px;
+  border-radius: 4px;
+  color: var(--dark-purple);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.blog_list_main .blog_text a {
+  color: var(--purple);
+  margin-top: 25px;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.blog_list_main .blog_text a:hover {
+  text-decoration: underline;
+}
+
+.blog_list_story.row_am {
+  padding-top: 30px;
+}
+
+.blog_list_story .story_box {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+/* -----------------About-App-Section-Css-Start------------------ */
+
+/* about us section wraper */
+.about_app_section .about_img {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* about us section images*/
+.about_app_section .about_img img {
+  max-width: 100%;
+}
+
+.about_app_section .about_img::before {
+  content: "";
+  position: absolute;
+  left: 38%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background-color: var(--bg-white);
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.about_app_section .about_img .screen_img {
+  margin-left: -135px;
+  margin-top: 110px;
+}
+
+.about_app_section .about_text .section_title {
+  text-align: left;
+}
+
+.about_app_section .about_text .section_title h2 {
+  margin-bottom: 15px;
+}
+
+.about_app_section .about_text .list {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.about_app_section .about_text .list ul {
+  position: relative;
+}
+
+
+.about_app_section .about_text .list ul li{
+  font-size: 17px;
+  color: var(--dark-purple);
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+.team-member-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
