@@ -39,7 +39,7 @@
           <li class="nav-item"> <a class="nav-link" href="index.html#projects">Projects</a> </li>
           <li class="nav-item"> <a class="nav-link" href="index.html#about">About</a> </li>
           <li class="nav-item"> <a class="nav-link" href="index.html#numbers">Expenses</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="index.html#volunteer">Volunteer</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="about.html#volunteer">Volunteer</a> </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">Team</a>
           </li>
@@ -939,7 +939,7 @@
       <a href="https://opencollective.com/blisslabs/donate" target="_blank">
         <img src="https://opencollective.com/webpack/donate/button@2x.png?color=blue" width="300rem" class="pb-3">
       </a>
-      <script height="auto" width="100%" position="justify-center" src="https://opencollective.com/blisslabs/banner.js?style={&quot;a&quot;:{&quot;color&quot;:&quot;#ffffff&quot;},&quot;h2&quot;:{&quot;fontFamily&quot;:&quot;Verdana&quot;,&quot;fontWeight&quot;:&quot;bold&quot;,&quot;fontSize&quot;:&quot;54px&quot;,&quot;color&quot;:&quot;#ffffff&quot;}}"></script>
+      <!-- <script height="auto" width="100%" position="justify-center" src="https://opencollective.com/blisslabs/banner.js?style={&quot;a&quot;:{&quot;color&quot;:&quot;#ffffff&quot;},&quot;h2&quot;:{&quot;fontFamily&quot;:&quot;Verdana&quot;,&quot;fontWeight&quot;:&quot;bold&quot;,&quot;fontSize&quot;:&quot;54px&quot;,&quot;color&quot;:&quot;#ffffff&quot;}}"></script> -->
     </div>
   </section>
   <div class="py-5 text-center" style="background-image: linear-gradient(to left bottom, rgba(189, 195, 199, .75), rgba(44, 62, 80, .75)); background-size: 100%;">
@@ -962,7 +962,7 @@
       </div>
     </div>
   </div>
-  <section id="volunteer">
+  <!-- <section id="volunteer">
     <div class="pt-5 bg-primary" id="volunteer">
       <div class="container">
         <div class="row">
@@ -975,54 +975,12 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <section id="team"></section>
   <!-- Project contributors start -->
   <!-- container start -->
   <!-- container end -->
-  <script>
-    $(document).ready(function() {
-      // Make a GET request to the JSON API
-      $.get("https://api.blissroms.org/api/contributors/all", function(data) {
-        // Assuming data is an array of team member objects
-        data.forEach(function(member) {
-          // Create a new member box for each team member
-          var memberBox = `
-          <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="${member.avatar}" alt="image" class="team-member-avatar">
-              </div>
-              <h3>${member.member}</h3>
-              <span class="designation">${member.designation}</span>
-            </div>
-          </div>
-          `;
-          // Append the member box to the team-members section
-          $("#contributors_slider").append(memberBox);
-        });
-        // Initialize Owl Carousel after adding members
-        $("#contributors_slider").owlCarousel({
-          items: 2, // You can adjust the number of items shown per slide
-          loop: true,
-          margin: 30,
-          autoplay: true,
-          autoplayTimeout: 3000,
-          responsive: {
-            0: {
-              items: 1
-            },
-            768: {
-              items: 3
-            },
-            992: {
-              items: 4
-            }
-          }
-        });
-      });
-    });
-  </script>
+  
   <!-- Project contributors end -->
   <section id="join">
     <div class="py-4 bg-dark " id="join" style="	background-image: url(assets/images/Bliss_view_bg_1.png);	background-position: right bottom;	background-size: cover;	background-repeat: repeat;	background-attachment: fixed;">
