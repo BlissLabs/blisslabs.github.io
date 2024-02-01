@@ -634,22 +634,22 @@
       // Make a GET request to the JSON API
       $.get("https://api.blissroms.org/api/contributors/all", function(data) {
         // Assuming data is an array of team member objects
-        // data.forEach(function(member) {
-        //   // Create a new member box for each team member
-        //   var memberBox = `
-        //   <div class="item">
-        //     <div class="testimonial_slide_box">
-        //       <div class="testimonial_img">
-        //         <img src="${member.avatar}" alt="image" class="team-member-avatar">
-        //       </div>
-        //       <h3>${member.member}</h3>
-        //       <span class="designation">${member.designation}</span>
-        //     </div>
-        //   </div>
-        //   `;
-        //   // Append the member box to the team-members section
-        //   $("#contributors_slider").append(memberBox);
-        // });
+        data.forEach(function(member) {
+          // Create a new member box for each team member
+          var memberBox = `
+          <div class="item">
+            <div class="testimonial_slide_box">
+              <div class="testimonial_img">
+                <img src="${member.avatar}" alt="image" class="team-member-avatar">
+              </div>
+              <h3>${member.member}</h3>
+              <span class="designation">${member.designation}</span>
+            </div>
+          </div>
+          `;
+          // Append the member box to the team-members section
+          $("#contributors_slider").append(memberBox);
+        });
         // Initialize Owl Carousel after adding members
         $("#contributors_slider").owlCarousel({
           items: 2, // You can adjust the number of items shown per slide
