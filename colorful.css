@@ -4166,7 +4166,9 @@ button.close {
   color: #efefef; }
 
 .carousel {
-  position: relative; }
+  position: relative;
+  margin-bottom: 10dvh;
+}
 
 .carousel-inner {
   position: relative;
