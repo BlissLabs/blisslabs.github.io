@@ -10,7 +10,8 @@
   <meta name="description" content="A non-profit org that develops open source software for the community">
   <meta name="keywords" content="aosp, bliss, labs">
   <!-- CSS dependencies -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Comfortaa|Cormorant+Garamond|Poiret+One" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
@@ -30,7 +31,7 @@
       max-width: 1200px;
       margin: 0 auto;
     }
-    
+
     .team-member-card {
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(20px);
@@ -42,7 +43,7 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     .team-member-card::before {
       content: '';
       position: absolute;
@@ -53,18 +54,18 @@
       background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
       transition: left 0.8s ease;
     }
-    
+
     .team-member-card:hover::before {
       left: 100%;
     }
-    
+
     .team-member-card:hover {
       transform: translateY(-8px) scale(1.02);
       background: rgba(255, 255, 255, 0.15);
       border-color: rgba(255, 255, 255, 0.25);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     }
-    
+
     .member-photo {
       width: 100px;
       height: 100px;
@@ -75,13 +76,13 @@
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
       transition: all 0.4s ease;
     }
-    
+
     .team-member-card:hover .member-photo {
       border-color: rgba(255, 255, 255, 0.4);
       transform: scale(1.05);
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     }
-    
+
     .member-name {
       color: rgba(255, 255, 255, 0.95);
       font-size: 1.3rem;
@@ -90,14 +91,14 @@
       letter-spacing: 0.5px;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-    
+
     .member-titles {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 0.15rem;
     }
-    
+
     .role-line {
       color: rgba(255, 255, 255, 0.8);
       font-size: 1.05rem;
@@ -106,12 +107,12 @@
       display: block;
       text-align: center;
     }
-    
+
     .role-line:not(:last-child)::after {
       content: ' /';
       color: rgba(255, 255, 255, 0.6);
     }
-    
+
     /* Responsive Design */
     @media (max-width: 1200px) {
       .team-grid {
@@ -119,84 +120,147 @@
         gap: 1.25rem;
       }
     }
-    
+
     @media (max-width: 768px) {
       .team-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.25rem;
         padding: 1.5rem 0.5rem;
       }
-      
+
       .team-member-card {
         padding: 1.5rem 1rem;
       }
-      
+
       .member-photo {
         width: 80px;
         height: 80px;
         margin-bottom: 1rem;
       }
-      
+
       .member-name {
         font-size: 1.1rem;
       }
-      
+
       .role-line {
         font-size: 0.95rem;
       }
     }
-    
+
     @media (max-width: 480px) {
       .team-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
       }
-      
+
       .team-member-card {
         padding: 1.25rem 0.75rem;
       }
     }
-    
+
     /* Enhanced Animation */
     .team-member-card {
       opacity: 0;
       transform: translateY(40px) scale(0.95);
       animation: smoothFadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     }
-    
+
     @keyframes smoothFadeIn {
       to {
         opacity: 1;
         transform: translateY(0) scale(1);
       }
     }
-    
-    .team-member-card:nth-child(1) { animation-delay: 0.1s; }
-    .team-member-card:nth-child(2) { animation-delay: 0.15s; }
-    .team-member-card:nth-child(3) { animation-delay: 0.2s; }
-    .team-member-card:nth-child(4) { animation-delay: 0.25s; }
-    .team-member-card:nth-child(5) { animation-delay: 0.3s; }
-    .team-member-card:nth-child(6) { animation-delay: 0.35s; }
-    .team-member-card:nth-child(7) { animation-delay: 0.4s; }
-    .team-member-card:nth-child(8) { animation-delay: 0.45s; }
-    .team-member-card:nth-child(9) { animation-delay: 0.5s; }
-    .team-member-card:nth-child(10) { animation-delay: 0.55s; }
-    .team-member-card:nth-child(11) { animation-delay: 0.6s; }
-    .team-member-card:nth-child(12) { animation-delay: 0.65s; }
+
+    .team-member-card:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .team-member-card:nth-child(2) {
+      animation-delay: 0.15s;
+    }
+
+    .team-member-card:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    .team-member-card:nth-child(4) {
+      animation-delay: 0.25s;
+    }
+
+    .team-member-card:nth-child(5) {
+      animation-delay: 0.3s;
+    }
+
+    .team-member-card:nth-child(6) {
+      animation-delay: 0.35s;
+    }
+
+    .team-member-card:nth-child(7) {
+      animation-delay: 0.4s;
+    }
+
+    .team-member-card:nth-child(8) {
+      animation-delay: 0.45s;
+    }
+
+    .team-member-card:nth-child(9) {
+      animation-delay: 0.5s;
+    }
+
+    .team-member-card:nth-child(10) {
+      animation-delay: 0.55s;
+    }
+
+    .team-member-card:nth-child(11) {
+      animation-delay: 0.6s;
+    }
+
+    .team-member-card:nth-child(12) {
+      animation-delay: 0.65s;
+    }
+
+    /* Contributors Carousel Text Fix */
+    .testimonial_slide_box h3 {
+      font-size: 1.1rem !important;
+      margin-bottom: 0.5rem !important;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .testimonial_slide_box .designation {
+      font-size: 0.85rem !important;
+      line-height: 1.2 !important;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 2.4em;
+      margin-top: 0.5rem;
+    }
+
+    .testimonial_slide_box {
+      padding: 1rem 0.5rem !important;
+    }
   </style>
   <!-- Script: Navbar on-top -->
   <script src="js/navbar-ontop.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <style> @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400&display=swap');
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400&display=swap');
   </style>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div class="container"> <a class="navbar-brand" href="index.html">
-        <img class="img-fluid d-inline mx-auto align-middle mnav" src="assets/images/Lotus_white.png" width="52px" style="padding-bottom: 0.4rem; ">
+        <img class="img-fluid d-inline mx-auto align-middle mnav" src="assets/images/Lotus_white.png" width="52px"
+          style="padding-bottom: 0.4rem; ">
         <b style="font-family: 'Manrope', sans-serif;">BlissLabs</b>
-      </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar10">
+      </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
+        data-target="#navbar10">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbar10">
@@ -209,7 +273,8 @@
             <a class="nav-link" href="about.html">Team</a>
           </li>
         </ul>
-        <a class="btn navbar-btn ml-md-2 btn-light text-dark" href="https://opencollective.com/blisslabs/donate" target="_blank">Donate</a>
+        <a class="btn navbar-btn ml-md-2 btn-light text-dark" href="https://opencollective.com/blisslabs/donate"
+          target="_blank">Donate</a>
         <!-- <a class="btn navbar-btn ml-md-2 brightness" href="https://opencollective.com/blisslabs/donate" target="_blank"> -->
         <!-- <img src="https://opencollective.com/webpack/donate/button@2x.png?color=blue" style="width: 40%; display: flex; justify-content: right;" /> -->
         <!-- </a> -->
@@ -224,7 +289,8 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"> </li>
           </ol>
           <div class="carousel-inner">
-            <div class="carousel-item active "> <img class="cover d-block img-fluid fheight" src="https://static.pingendo.com/cover-bubble-dark.svg" style="opacity: 0.0;">
+            <div class="carousel-item active "> <img class="cover d-block img-fluid fheight"
+                src="https://static.pingendo.com/cover-bubble-dark.svg" style="opacity: 0.0;">
               <div class="carousel-caption pb-5 mb-5">
                 <div class="p-img-n">
                   <img src="assets/images/bliss_labs_logo.svg" width="240px">
@@ -244,7 +310,8 @@
   <!-- Start wrap sections -->
   <!-- End wrap sections -->
   <section id="team">
-    <div class="pt-5" id="our_team" style="	background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
+    <div class="pt-5" id="our_team"
+      style="	background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
       <div class="container">
         <div class="row  text-light" style="display: block;" align-items-center="">
           <div class=" text-center pb-4">
@@ -255,80 +322,31 @@
               <div class="tab-pane fade show active" id="tabone" role="tabpanel">
                 <section id="team_content" class="team_content">
                   <div class="container px-md-5 col-md-8 pb-4" style="display: block;">
-                    <div class="row">
-                      <h3> Executive </h3>
-                      <div id="event" class="team_item"><img class="image crop" src="https://internal.blisslabs.org/storage/8/61d01b44afe73_jackeagle.jpeg" alt="Founder / CEO / Lead Developer">
-                        <h6>Founder / CEO / Lead Developer</h6>
-                      </div>
-                      <div id="event" class="team_item"><img class="image crop" src="https://internal.blisslabs.org/storage/9/61d01b9052862_electrikjesus.png" alt="CTO / OS / AG Project Manager">
-                        <h6>CTO / OS / AG Project Manager</h6>
-                      </div>
-                      <div id="event" class="team_item"><img class="image crop" src="https://internal.blisslabs.org/storage/13/61d01c696c918_aryan.jpeg" alt="Board Member">
-                        <h6>Board Member</h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="container px-md-5 col-md-8 pb-4" style="display: block;">
-                    <div class="row">
-                      <h3> Development </h3>
-                      <div id="event" class="team_item"><img class="image crop" src="https://internal.blisslabs.org/storage/16/61d01cefdd612_eric.jpeg" alt="Backend Developer / Lead Maintainer">
-                        <h6>Backend Developer / Lead Maintainer</h6>
-                      </div>
-                      <div id="event" class="team_item"><img class="image crop" src="https://internal.blisslabs.org/storage/23/621cd2f4a5ea3_ayan.jpg" alt="Lead Developer">
-                        <h6>Lead Developer</h6>
-                      </div>
-                      <div id="event" class="team_item"><img class="image crop" src="https://internal.blisslabs.org/storage/24/62542b7b16cfb_huh.jpg" alt="SupremeGamers Moderator / BlissOS&amp;AG maintainer">
-                        <h6>SupremeGamers Moderator / BlissOS&amp;AG maintainer</h6>
-                      </div>
-                      <div id="event" class="team_item"><img class="image crop" src="https://internal.blisslabs.org/storage/31/6429bfc63bf72_16012350.jpg" alt="App Developer">
-                        <h6>App Developer</h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="container px-md-5 col-md-8 pb-4" style="display: block;">
-                    <div class="row">
-                      <h3> Graphics </h3>
-                      <div id="event" class="team_item"><img class="image crop" src="https://internal.blisslabs.org/storage/19/61d01d85e2cdc_adnan.jpg" alt="Graphics Designer">
-                        <h6>Graphics Designer</h6>
-                      </div>
-                      <div id="event" class="team_item"><img class="image crop" src="https://internal.blisslabs.org/storage/34/6597ba0009ec4_Sreelekshman.png" alt="Graphics Designer / Web Developer">
-                        <h6>Graphics Designer / Web Developer</h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="container px-md-5 col-md-8 pb-4" style="display: block;">
-                    <div class="row">
-                      <h3> Relations and Outreach </h3>
-                      <div id="event" class="team_item"><img class="image crop" src="https://internal.blisslabs.org/storage/29/6395e8b4d56d2_IMG_20220514_121537_110.jpg" alt="Public Relations / Maintainer Relations">
-                        <h6>Public Relations / Maintainer Relations</h6>
-                      </div>
-                    </div>
-                  </div>
                 </section>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
                 <script>
                   $.ajax({
                     type: "GET",
                     url: "https://api.blissroms.org/api/public/organizations/blisslabs/", // TeamBliss JSON
-                    success: function(response) {
+                    success: function (response) {
                       var data = response.data.team_members;
                       var teamContent = '<div class="team-grid">'; // Start the grid
-                      
+
                       // Simply loop through all team members without categorization
-                      data.forEach(function(member) {
+                      data.forEach(function (member) {
                         // Create separate lines for each designation
                         var rolesHtml = '';
-                        member.designations.forEach(function(designation, index) {
+                        member.designations.forEach(function (designation, index) {
                           rolesHtml += '<span class="role-line">' + designation.name + '</span>';
                         });
-                        
+
                         teamContent += '<div class="team-member-card">';
                         teamContent += '<img class="member-photo" src="' + member.profile_photo_url + '" alt="' + member.name + '" />';
                         teamContent += '<h4 class="member-name">' + member.name + '</h4>';
                         teamContent += '<div class="member-titles">' + rolesHtml + '</div>';
                         teamContent += '</div>';
                       });
-                      
+
                       teamContent += '</div>'; // Close the grid
                       // Update the page with the new content
                       document.getElementById('team_content').innerHTML = teamContent;
@@ -344,478 +362,143 @@
   </section>
   <!-- Project contributors start -->
   <!-- container start -->
-  <section class="row_am testimonial_section " style="background-image: linear-gradient(to left bottom, rgba(189, 195, 199, .75), rgba(44, 62, 80, .75)); background-size: 100%;">
+  <section class="row_am testimonial_section "
+    style="background-image: linear-gradient(to left bottom, rgba(189, 195, 199, .75), rgba(44, 62, 80, .75)); background-size: 100%;">
     <div class="container text-center align-items-center justify-content-center">
       <div class="section_title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
         <!-- h2 -->
         <h2>Meet <span>BlissLabs Project Contributors</span></h2>
         <!-- p -->
-        <p>We would like to thank the many individuals who have contributed to our BlissLabs projects. We could not have created our community without the help of these dedicated contributors. Thank you all</p>
+        <p>We would like to thank the many individuals who have contributed to our BlissLabs projects. We could not have
+          created our community without the help of these dedicated contributors. Thank you all</p>
       </div>
       <div class="testimonial_block" data-aos="fade-in" data-aos-duration="1500">
-        <div id="contributors_slider" class="owl-carousel owl-theme">
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/8/61d01b44afe73_jackeagle.jpeg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Jackeagle</h3>
-              <span class="designation">Founder / CEO / Lead Developer</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/9/61d01b9052862_electrikjesus.png" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Jon West</h3>
-              <span class="designation">CTO / OS / AG Project Manager</span>
-            </div>
-          </div> -->
-          <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/10/61d01bb278524_donna.jpg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Donna West</h3>
-              <span class="designation">CFO / HR</span>
-            </div>
+        <div id="contributors_container">
+          <div id="contributors_grid" class="team-grid">
           </div>
-          <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/11/61d01be54b224_antonio.jpeg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Antonio Luciano</h3>
-              <span class="designation">Board Secretary / Social Media Specialist</span>
-            </div>
+          <div id="contributors_slider" class="owl-carousel owl-theme" style="display: none;">
           </div>
-          <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/12/61d01c0546527_custom.jpeg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>customworx</h3>
-              <span class="designation">Board Member</span>
-            </div>
-          </div>
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/13/61d01c696c918_aryan.jpeg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Aryan Arora</h3>
-              <span class="designation">Board Member</span>
-            </div>
-          </div> -->
-          <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/14/61d01c96bc448_deepak.jpeg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Deepak Sharma</h3>
-              <span class="designation">Server Administrator</span>
-            </div>
-          </div>
-          <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/15/61d01cbf7a48c_vaughn.png" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Vaughn</h3>
-              <span class="designation">Server Administrator</span>
-            </div>
-          </div>
-          <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/16/61d01cefdd612_eric.jpeg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Eric Park</h3>
-              <span class="designation">Backend Developer / Lead Maintainer</span>
-            </div>
-          </div>
-          <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/17/61d01d25da560_evilvenom.jpeg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>EvilVenøm</h3>
-              <span class="designation">Wiki Lead</span>
-            </div>
-          </div>
-          <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/19/61d01d85e2cdc_adnan.jpg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Adnan Faysal</h3>
-              <span class="designation">Graphics Designer</span>
-            </div>
-          </div>
-          <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/20/61d01dcebddc5_erfan.jpeg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Erfan Abdi</h3>
-              <span class="designation">Waydroid Lead Developer</span>
-            </div>
-          </div>
-          <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/21/61d01e2751b0a_utzoz.png" alt="image" class="team-member-avatar">
-              </div>
-              <h3>utzcoz</h3>
-              <span class="designation">BoringDroid Founder / Lead Developer</span>
-            </div>
-          </div>
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/23/621cd2f4a5ea3_ayan.jpg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Ayan Mukherjee</h3>
-              <span class="designation">Lead Developer</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/24/62542b7b16cfb_huh.jpg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>hmtheboy154</h3>
-              <span class="designation">SupremeGamers Moderator / BlissOS&amp;AG maintainer</span>
-            </div>
-          </div> -->
-          <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/27/62754b43dad7b_54428357.jpeg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Lokesh</h3>
-              <span class="designation">Front End Developer / Web Designer</span>
-            </div>
-          </div>
-          <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/28/63752e027b694_rahul.png" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Rahul Pillai</h3>
-              <span class="designation">App Developer</span>
-            </div>
-          </div>
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/29/6395e8b4d56d2_IMG_20220514_121537_110.jpg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Jis G Jacob</h3>
-              <span class="designation">Public Relations / Maintainer Relations</span>
-            </div>
-          </div> -->
-          <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/30/6429bbb2ec097_photo_2023-04-02_22-58-50.jpg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Xelte Xynos</h3>
-              <span class="designation">Graphics Designer</span>
-            </div>
-          </div>
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/31/6429bfc63bf72_16012350.jpg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Shripal Jain</h3>
-              <span class="designation">App Developer</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/34/6597ba0009ec4_Sreelekshman.png" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Sreelekshman S</h3>
-              <span class="designation">Graphics Designer / Web Developer</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/8/61d01b44afe73_jackeagle.jpeg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Jackeagle</h3>
-              <span class="designation">Founder / CEO / Lead Developer</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/9/61d01b9052862_electrikjesus.png" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Jon West</h3>
-              <span class="designation">CTO / OS / AG Project Manager</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/10/61d01bb278524_donna.jpg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Donna West</h3>
-              <span class="designation">CFO / HR</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/11/61d01be54b224_antonio.jpeg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Antonio Luciano</h3>
-              <span class="designation">Board Secretary / Social Media Specialist</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/12/61d01c0546527_custom.jpeg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>customworx</h3>
-              <span class="designation">Board Member</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/13/61d01c696c918_aryan.jpeg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Aryan Arora</h3>
-              <span class="designation">Board Member</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/14/61d01c96bc448_deepak.jpeg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Deepak Sharma</h3>
-              <span class="designation">Server Administrator</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/15/61d01cbf7a48c_vaughn.png" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Vaughn</h3>
-              <span class="designation">Server Administrator</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/16/61d01cefdd612_eric.jpeg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Eric Park</h3>
-              <span class="designation">Backend Developer / Lead Maintainer</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/17/61d01d25da560_evilvenom.jpeg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>EvilVenøm</h3>
-              <span class="designation">Wiki Lead</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/19/61d01d85e2cdc_adnan.jpg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Adnan Faysal</h3>
-              <span class="designation">Graphics Designer</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/20/61d01dcebddc5_erfan.jpeg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Erfan Abdi</h3>
-              <span class="designation">Waydroid Lead Developer</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/21/61d01e2751b0a_utzoz.png" alt="image" class="team-member-avatar">
-              </div>
-              <h3>utzcoz</h3>
-              <span class="designation">BoringDroid Founder / Lead Developer</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/23/621cd2f4a5ea3_ayan.jpg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Ayan Mukherjee</h3>
-              <span class="designation">Lead Developer</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/24/62542b7b16cfb_huh.jpg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>hmtheboy154</h3>
-              <span class="designation">SupremeGamers Moderator / BlissOS&amp;AG maintainer</span>
-            </div>
-          </div> -->
-          <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/27/62754b43dad7b_54428357.jpeg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Lokesh</h3>
-              <span class="designation">Front End Developer / Web Designer</span>
-            </div>
-          </div>
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/28/63752e027b694_rahul.png" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Rahul Pillai</h3>
-              <span class="designation">App Developer</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/29/6395e8b4d56d2_IMG_20220514_121537_110.jpg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Jis G Jacob</h3>
-              <span class="designation">Public Relations / Maintainer Relations</span>
-            </div>
-          </div> -->
-          <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/30/6429bbb2ec097_photo_2023-04-02_22-58-50.jpg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Xelte Xynos</h3>
-              <span class="designation">Graphics Designer</span>
-            </div>
-          </div>
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/31/6429bfc63bf72_16012350.jpg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Shripal Jain</h3>
-              <span class="designation">App Developer</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="https://internal.blisslabs.org/storage/34/6597ba0009ec4_Sreelekshman.png" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Sreelekshman S</h3>
-              <span class="designation">Graphics Designer / Web Developer</span>
-            </div>
-          </div> -->
-          <!-- <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="assets/team/sreeja.svg" alt="image" class="team-member-avatar">
-              </div>
-              <h3>Sreeja Manghat</h3>
-              <span class="designation">CPO/Product Strategy</span>
-            </div>
-          </div> -->
         </div>
       </div>
     </div>
   </section>
-  
-  
+
+
   <!-- container end -->
 
 
   <script>
-    $(document).ready(function() {
-      // Make a GET request to the JSON API
-      $.get("https://api.blissroms.org/api/contributors/all", function(data) {
-        // Assuming data is an array of team member objects
-        data.forEach(function(member) {
-          // Create a new member box for each team member
-          var memberBox = `
-          <div class="item">
-            <div class="testimonial_slide_box">
-              <div class="testimonial_img">
-                <img src="${member.avatar}" alt="image" class="team-member-avatar">
+    $(document).ready(function () {
+      // Make a GET request to the new BlissLabs API endpoint for contributors
+      $.get("https://api.blissroms.org/api/public/organizations/blisslabs/", function (response) {
+        var contributorsData = response.data.contributors;
+        var contributorsArray = Object.keys(contributorsData);
+
+        // Check if we have more than 4 contributors
+        if (contributorsArray.length <= 4) {
+          // Use static grid for 4 or fewer contributors
+          var contributorsContent = '';
+          contributorsArray.forEach(function (key) {
+            var contributor = contributorsData[key];
+
+            contributorsContent += '<div class="team-member-card">';
+            contributorsContent += '<img class="member-photo" src="' + contributor.profile_photo_url + '" alt="' + contributor.name + '" />';
+            contributorsContent += '<h4 class="member-name">' + contributor.name + '</h4>';
+            contributorsContent += '<div class="member-titles">';
+            contributorsContent += '<span class="role-line">' + contributor.contribution_notes + '</span>';
+            contributorsContent += '</div>';
+            contributorsContent += '</div>';
+          });
+
+          document.getElementById('contributors_grid').innerHTML = contributorsContent;
+          $('#contributors_grid').show();
+          $('#contributors_slider').hide();
+        } else {
+          // Use carousel for more than 4 contributors
+          contributorsArray.forEach(function (key) {
+            var contributor = contributorsData[key];
+            var memberBox = `
+            <div class="item">
+              <div class="team-member-card">
+                <img class="member-photo" src="${contributor.profile_photo_url}" alt="${contributor.name}" />
+                <h4 class="member-name">${contributor.name}</h4>
+                <div class="member-titles">
+                  <span class="role-line">${contributor.contribution_notes}</span>
+                </div>
               </div>
-              <h3>${member.member}</h3>
-              <span class="designation">${member.designation}</span>
             </div>
-          </div>
-          `;
-          // Append the member box to the team-members section
-          $("#contributors_slider").append(memberBox);
-        });
-        // Initialize Owl Carousel after adding members
-        $("#contributors_slider").owlCarousel({
-          items: 2, // You can adjust the number of items shown per slide
-          loop: true,
-          margin: 30,
-          autoplay: true,
-          autoplayTimeout: 3000,
-          responsive: {
-            0: {
-              items: 1
-            },
-            768: {
-              items: 3
-            },
-            992: {
-              items: 4
+            `;
+            $('#contributors_slider').append(memberBox);
+          });
+
+          // Initialize Owl Carousel with continuous sliding animation
+          $('#contributors_slider').owlCarousel({
+            items: 4,
+            loop: true,
+            margin: 30,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplaySpeed: 800,
+            autoplayHoverPause: false,
+            smartSpeed: 800,
+            slideTransition: 'linear',
+            nav: false,
+            dots: false,
+            responsive: {
+              0: {
+                items: 1
+              },
+              768: {
+                items: 2
+              },
+              992: {
+                items: 3
+              },
+              1200: {
+                items: 4
+              }
             }
-          }
-        });
+          });
+
+          $('#contributors_grid').hide();
+          $('#contributors_slider').show();
+        }
       });
     });
   </script>
   <!-- Project contributors end -->
   <section id="volunteer">
-    <div class="py-4 bg-dark " id="join" style="	background-image: url(assets/images/Bliss_view_bg_1.png);	background-position: right bottom;	background-size: cover;	background-repeat: repeat;	background-attachment: fixed;">
+    <div class="py-4 bg-dark " id="join"
+      style="	background-image: url(assets/images/Bliss_view_bg_1.png);	background-position: right bottom;	background-size: cover;	background-repeat: repeat;	background-attachment: fixed;">
       <div class="container card-body lt-blur shadow">
         <div class="row ">
           <div class="col-md-8 text-left ">
             <h3 class="text-primary display-4">Join Our Team</h3>
             <h2 class="">We are accepting applications now</h2>
             <p class="text-warning">* only volunteer positions currently available. Internships coming soon *</p>
-            <p class="mb-3">We are accepting people in small manageable groups while we grow, and we tend to lean towards the type of people that want to learn and grow with BlissLabs. We provide the tools, knowledge and the mentorship needed to help bring your development dreams to reality, and all we ask in return is a minimum contribution towards one of our projects while you learn and grow in your strengths. If you're an individual and would like to apply to join our team, please use the button below </p>
+            <p class="mb-3">We are accepting people in small manageable groups while we grow, and we tend to lean
+              towards the type of people that want to learn and grow with BlissLabs. We provide the tools, knowledge and
+              the mentorship needed to help bring your development dreams to reality, and all we ask in return is a
+              minimum contribution towards one of our projects while you learn and grow in your strengths. If you're an
+              individual and would like to apply to join our team, please use the button below </p>
             <a href="https://goo.gl/forms/PdiaAj1PojosmehK2" class="btn btn-primary mb-3">Join Our Team</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="py-4 text-center text-md-right" style="	background-image: url(assets/images/Bliss_view_bg_1.png);	background-position: right bottom;	background-size: cover;	background-repeat: repeat;	background-attachment: fixed;">
+    <div class="py-4 text-center text-md-right"
+      style="	background-image: url(assets/images/Bliss_view_bg_1.png);	background-position: right bottom;	background-size: cover;	background-repeat: repeat;	background-attachment: fixed;">
       <div class="container card-body lt-blur">
         <div class="row">
           <div class="mx-auto mx-md-0 ml-md-auto col-10 col-md-9">
             <h3 class="text-primary display-4">Submit Your Project</h3>
-            <p class="mb-3 text-white">Got a great open-source project, but having trouble getting things off the ground? Or maybe you are looking to gain a few more people to help you out on it. Whatever your situation is, you can submit your project below to start the review process and join under BlissLabs.</p>
+            <p class="mb-3 text-white">Got a great open-source project, but having trouble getting things off the
+              ground? Or maybe you are looking to gain a few more people to help you out on it. Whatever your situation
+              is, you can submit your project below to start the review process and join under BlissLabs.</p>
             <form class="form-inline d-flex justify-content-end">
-              <div class="input-group"> <a class="mb-3 btn btn-primary text-center d-flex justify-content-center" href="https://goo.gl/kAb7ti" role="button" style="color: rgb(255, 255, 255);">Submit your project now</a>
+              <div class="input-group"> <a class="mb-3 btn btn-primary text-center d-flex justify-content-center"
+                  href="https://goo.gl/kAb7ti" role="button" style="color: rgb(255, 255, 255);">Submit your project
+                  now</a>
               </div>
             </form>
           </div>
@@ -877,8 +560,11 @@
     </footer>
     <!-- FOOTER  -->
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous" style=""></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"
+      style=""></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"></script>
     <!-- Script: Smooth scrolling between anchors in the same page -->
     <script src="js/smooth-scroll.js"></script>
     <script src="js/script.js"></script>
