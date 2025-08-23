@@ -19,6 +19,171 @@
   <link rel="stylesheet" href="assets/css/accordian.css">
   <link rel="stylesheet" href="assets/css/table.css">
   <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Blended Team Section - Matching Website Aesthetic */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .team-member-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .team-member-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: left 0.8s ease;
+    }
+    
+    .team-member-card:hover::before {
+      left: 100%;
+    }
+    
+    .team-member-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+    
+    .member-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 1.5rem;
+      object-fit: cover;
+      border: 3px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s ease;
+    }
+    
+    .team-member-card:hover .member-photo {
+      border-color: rgba(255, 255, 255, 0.4);
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .member-name {
+      color: rgba(255, 255, 255, 0.95);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.5px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .member-titles {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.15rem;
+    }
+    
+    .role-line {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.05rem;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      display: block;
+      text-align: center;
+    }
+    
+    .role-line:not(:last-child)::after {
+      content: ' /';
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+      .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+        padding: 1.5rem 0.5rem;
+      }
+      
+      .team-member-card {
+        padding: 1.5rem 1rem;
+      }
+      
+      .member-photo {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 1rem;
+      }
+      
+      .member-name {
+        font-size: 1.1rem;
+      }
+      
+      .role-line {
+        font-size: 0.95rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .team-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      
+      .team-member-card {
+        padding: 1.25rem 0.75rem;
+      }
+    }
+    
+    /* Enhanced Animation */
+    .team-member-card {
+      opacity: 0;
+      transform: translateY(40px) scale(0.95);
+      animation: smoothFadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+    
+    @keyframes smoothFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    
+    .team-member-card:nth-child(1) { animation-delay: 0.1s; }
+    .team-member-card:nth-child(2) { animation-delay: 0.15s; }
+    .team-member-card:nth-child(3) { animation-delay: 0.2s; }
+    .team-member-card:nth-child(4) { animation-delay: 0.25s; }
+    .team-member-card:nth-child(5) { animation-delay: 0.3s; }
+    .team-member-card:nth-child(6) { animation-delay: 0.35s; }
+    .team-member-card:nth-child(7) { animation-delay: 0.4s; }
+    .team-member-card:nth-child(8) { animation-delay: 0.45s; }
+    .team-member-card:nth-child(9) { animation-delay: 0.5s; }
+    .team-member-card:nth-child(10) { animation-delay: 0.55s; }
+    .team-member-card:nth-child(11) { animation-delay: 0.6s; }
+    .team-member-card:nth-child(12) { animation-delay: 0.65s; }
+  </style>
   <!-- Script: Navbar on-top -->
   <script src="js/navbar-ontop.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -144,71 +309,27 @@
                 <script>
                   $.ajax({
                     type: "GET",
-                    url: "https://api.blissroms.org/api/teambliss", // TeamBliss JSON
-                    success: function(data) {
-                      var teamContent = ''; // Variable to hold HTML
-                      // List of departments:
-                      // - Executive
-                      // - Development
-                      // - Graphics
-                      // - Relations and Outreach
-                      teamContent += '<div class="container px-md-5 col-md-8 pb-4" style="display: block;">';
-                      teamContent += '<div class="row">';
-                      teamContent += '<h3> Executive </h3>';
-                      // Sort through data and for data[i].department, display in respective group 
-                      for (var i = 0; i < data.length; i++) { // Loop through object
-                        if (data[i].department == 'Executive') {
-                          teamContent += '<div id="event" class="team_item">';
-                          teamContent += '<img class="image crop" src="' + data[i].avatar + '" ';
-                          teamContent += 'alt="' + data[i].designation + '" />';
-                          teamContent += '<h6>' + data[i].designation + '</h6>';
-                          teamContent += '</div>';
-                        }
-                      }
-                      teamContent += '</div>';
-                      teamContent += '</div>';
-                      teamContent += '<div class="container px-md-5 col-md-8 pb-4" style="display: block;">';
-                      teamContent += '<div class="row">';
-                      teamContent += '<h3> Development </h3>';
-                      for (var i = 0; i < data.length; i++) { // Loop through object
-                        if (data[i].department == 'Development') {
-                          teamContent += '<div id="event" class="team_item">';
-                          teamContent += '<img class="image crop" src="' + data[i].avatar + '" ';
-                          teamContent += 'alt="' + data[i].designation + '" />';
-                          teamContent += '<h6>' + data[i].designation + '</h6>';
-                          teamContent += '</div>';
-                        }
-                      }
-                      teamContent += '</div>';
-                      teamContent += '</div>';
-                      teamContent += '<div class="container px-md-5 col-md-8 pb-4" style="display: block;">';
-                      teamContent += '<div class="row">';
-                      teamContent += '<h3> Graphics </h3>';
-                      for (var i = 0; i < data.length; i++) { // Loop through object
-                        if (data[i].department == 'Graphics') {
-                          teamContent += '<div id="event" class="team_item">';
-                          teamContent += '<img class="image crop" src="' + data[i].avatar + '" ';
-                          teamContent += 'alt="' + data[i].designation + '" />';
-                          teamContent += '<h6>' + data[i].designation + '</h6>';
-                          teamContent += '</div>';
-                        }
-                      }
-                      teamContent += '</div>';
-                      teamContent += '</div>';
-                      teamContent += '<div class="container px-md-5 col-md-8 pb-4" style="display: block;">';
-                      teamContent += '<div class="row">';
-                      teamContent += '<h3> Relations and Outreach </h3>';
-                      for (var i = 0; i < data.length; i++) { // Loop through object
-                        if (data[i].department == 'Relations and Outreach') {
-                          teamContent += '<div id="event" class="team_item">';
-                          teamContent += '<img class="image crop" src="' + data[i].avatar + '" ';
-                          teamContent += 'alt="' + data[i].designation + '" />';
-                          teamContent += '<h6>' + data[i].designation + '</h6>';
-                          teamContent += '</div>';
-                        }
-                      }
-                      teamContent += '</div>';
-                      teamContent += '</div>';
+                    url: "https://api.blissroms.org/api/public/organizations/blisslabs/", // TeamBliss JSON
+                    success: function(response) {
+                      var data = response.data.team_members;
+                      var teamContent = '<div class="team-grid">'; // Start the grid
+                      
+                      // Simply loop through all team members without categorization
+                      data.forEach(function(member) {
+                        // Create separate lines for each designation
+                        var rolesHtml = '';
+                        member.designations.forEach(function(designation, index) {
+                          rolesHtml += '<span class="role-line">' + designation.name + '</span>';
+                        });
+                        
+                        teamContent += '<div class="team-member-card">';
+                        teamContent += '<img class="member-photo" src="' + member.profile_photo_url + '" alt="' + member.name + '" />';
+                        teamContent += '<h4 class="member-name">' + member.name + '</h4>';
+                        teamContent += '<div class="member-titles">' + rolesHtml + '</div>';
+                        teamContent += '</div>';
+                      });
+                      
+                      teamContent += '</div>'; // Close the grid
                       // Update the page with the new content
                       document.getElementById('team_content').innerHTML = teamContent;
                     }
